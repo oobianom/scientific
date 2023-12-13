@@ -398,6 +398,12 @@ f(u)\,du\right)=f(x).\]</span></span></span></span></p>
 </div>
 <div id="full-width-figures" class="section level2">
 <h2>Full Width Figures</h2>
+<pre class="r"><code>library(reticulate)</code></pre>
+<p>Create a variable <code>x</code> in the Python session:</p>
+<pre class="python"><code>x = [1, 2, 3]</code></pre>
+<p>Access the Python variable <code>x</code> in an R code chunk:</p>
+<pre class="r"><code>py$x</code></pre>
+<pre><code>## [1] 1 2 3</code></pre>
 <p>You can arrange for figures to span across the entire page by using the chunk option <code>fig.fullwidth = TRUE</code>.</p>
 <pre class="r"><code>ggplot(diamonds, aes(carat, price)) + geom_smooth() +
   facet_grid(~ cut)</code></pre>
