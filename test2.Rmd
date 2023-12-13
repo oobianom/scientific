@@ -85,6 +85,22 @@ Note: if you set `echo = FALSE` in your global chunk options, you will have to a
 
 ## Full Width Figures
 
+```{r}
+library(reticulate)
+```
+
+Create a variable `x` in the Python session:
+
+```{python}
+x = [1, 2, 3]
+```
+
+Access the Python variable `x` in an R code chunk:
+
+```{r}
+py$x
+```
+
 You can arrange for figures to span across the entire page by using the chunk option `fig.fullwidth = TRUE`.
 
 ```{r fig-fullwidth, fig.width = 10, fig.height = 2, fig.fullwidth = TRUE, fig.cap = "A full width figure.", warning=FALSE, message=FALSE, cache=TRUE}
