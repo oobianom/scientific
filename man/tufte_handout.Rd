@@ -127,7 +127,7 @@ after \samp{\\hfill} for LaTeX output (to right-align text).
 \code{sans_serif()} applies sans-serif fonts to \code{text}.
 }
 \examples{
-library(tufte)
+library(scientific)
 newthought("In this section")
 }
 \references{

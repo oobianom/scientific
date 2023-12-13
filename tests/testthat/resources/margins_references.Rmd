@@ -41,7 +41,7 @@ references:
   title-short: R markdown
   type: book
   url: "https://bookdown.org/yihui/rmarkdown"
-output: tufte::tufte_html
+output: scientific::tufte_html
 ---
 
 See [@R-knitr]. 

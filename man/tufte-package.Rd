@@ -2,9 +2,9 @@
 % Please edit documentation in R/tufte-package.R
 \docType{package}
 \name{tufte-package}
-\alias{tufte}
+\alias{scientific}
 \alias{tufte-package}
-\title{tufte: Tufte's Styles for R Markdown Documents}
+\title{scientific: scientific's Styles for R Markdown Documents}
 \description{
 Provides R Markdown output formats to use Tufte styles for PDF and HTML output.
 }

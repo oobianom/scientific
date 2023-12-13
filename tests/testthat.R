@@ -1,4 +1,4 @@
 library(testthat)
-library(tufte)
+library(scientific)
 
 test_check("tufte")

@@ -77,7 +77,7 @@ sans_serif <- function(text) {
 }
 
 template_resources <- function(name, ...) {
-  system.file("rmarkdown", "templates", name, "resources", ..., package = "tufte")
+  system.file("rmarkdown", "templates", name, "resources", ..., package = "scientific")
 }
 
 gsub_fixed <- function(...) gsub(..., fixed = TRUE)

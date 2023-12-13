@@ -53,7 +53,7 @@ The easiest way to make a new R Markdown document using Tufte style is from with
 This can also be created from the command line using
 
 ```r
-rmarkdown::draft("tufte.Rmd", "tufte_html", "tufte")
+rmarkdown::draft("tufte.Rmd", "tufte_html", "scientific")
 ```
 
 ## Getting help
