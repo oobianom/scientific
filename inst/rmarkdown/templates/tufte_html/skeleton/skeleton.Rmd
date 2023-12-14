@@ -1,8 +1,8 @@
 ---
-title: "A Tufte Handout Example"
+title: "Scientific Report Writeup"
 runningheader: "Tufte Handout with R Markdown" # only for pdf output
 subtitle: "An implementation in R Markdown" # only for html output
-author: "JJ Allaire and Yihui Xie"
+author: "Obi  Obianom"
 date: "`r Sys.Date()`"
 output:
   scientific::tufte_html: default
