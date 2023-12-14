@@ -5,11 +5,11 @@ subtitle: "An implementation in R Markdown" # only for html output
 author: "JJ Allaire and Yihui Xie"
 date: "`r Sys.Date()`"
 output:
+  scientific::tufte_html: 
+    toc: true
   scientific::tufte_handout:
     citation_package: natbib
     latex_engine: xelatex
-  scientific::tufte_html: 
-    toc: true
   scientific::tufte_book:
     citation_package: natbib
     latex_engine: xelatex
