@@ -12,13 +12,11 @@ URL: https://scientific.obi.obianom.com
 BugReports: https://github.com/oobianom/scientific/issues
 Imports:
     htmltools,
-    knitr (>= 1.28),
-    rmarkdown (>= 2.11),
-    xfun (>= 0.13)
+    knitr,
+    rmarkdown,
+    xfun
 Suggests: 
-    covr,
-    testthat (>= 3.1.0),
-    withr (>= 2.3.0)
+    testthat
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
