@@ -9,7 +9,7 @@ author: "JJ Allaire and Yihui Xie"
 date: "`r Sys.Date()`"
 output:
   scientific::tufte_html: 
-    toc: true
+    toc: FALSE
     self_contained: FALSE
   scientific::tufte_handout:
     citation_package: natbib

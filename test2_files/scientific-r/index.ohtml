@@ -72,8 +72,10 @@ $endfor$
         $if(toc)$
         <div class="u-container-style u-layout-cell u-palette-1-base u-size-20 u-layout-cell-1">
           <div class="u-container-layout u-valign-top u-container-layout-1">
-          <div style="padding:10px"></div>
-            <div class="u-sticky u-header u-text-dark"> $toc$ </div>
+
+            <div class="u-sticky u-header u-text-dark ytoc">
+            <div style="padding:10px"></div>
+            $toc$ </div>
           </div>
         </div>
         $else$
