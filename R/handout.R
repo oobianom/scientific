@@ -27,7 +27,7 @@ tufte_book <- function(fig_width = 4, fig_height = 2.5, fig_crop = TRUE, dev = "
 
 tufte_pdf <- function(documentclass = c("tufte-handout", "tufte-book"), fig_width = 4, fig_height = 2.5,
                       fig_crop = TRUE, dev = "pdf", highlight = "default",
-                      template = template_resources("tufte_handout", "tufte-handout.tex"), ...) {
+                      template = temp_loc("tufte_handout", "tufte-handout.tex"), ...) {
 
   # resolve default highlight
   if (identical(highlight, "default")) highlight <- "pygments"

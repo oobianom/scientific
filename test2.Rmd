@@ -1,5 +1,8 @@
 ---
 title: "A Tufte Handout Example"
+pagetitle: "obi is a boy"
+highlighter: "Eclipse" 
+codelang: "ji ki"
 runningheader: "Tufte Handout with R Markdown" # only for pdf output
 subtitle: "An implementation in R Markdown" # only for html output
 author: "JJ Allaire and Yihui Xie"
@@ -7,6 +10,7 @@ date: "`r Sys.Date()`"
 output:
   scientific::tufte_html: 
     toc: true
+    self_contained: FALSE
   scientific::tufte_handout:
     citation_package: natbib
     latex_engine: xelatex
@@ -276,15 +280,6 @@ output:
     tufte_variant: "envisioned"
 ```
 
-To see the R Markdown source of this example document, you may follow [this link to Github](https://github.com/rstudio/tufte/raw/main/inst/rmarkdown/templates/tufte_html/skeleton/skeleton.Rmd), use the wizard in RStudio IDE (`File -> New File -> R Markdown -> From Template`), or open the Rmd file in the package:
-
-```{r eval=FALSE}
-file.edit(
-  scientific:::template_resources(
-    'tufte_html', '..', 'skeleton', 'skeleton.Rmd'
-  )
-)
-```
 
 This document is also available in [Chinese](https://rstudio.github.io/tufte/cn/), and its `envisioned` style can be found [here](https://rstudio.github.io/tufte/envisioned/).
 

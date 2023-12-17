@@ -27,7 +27,7 @@ tufte_html <- function(..., tufte_features = c("fonts", "background", "italics")
       ...,
       template = system.file("rmarkdown", "templates", "tufte_html", "layout","index.ohtml", package = .packageName),
       extra_dependencies = c(
-        extra_dependencies, tufte_html_dependency(tufte_features, tufte_variant)
+        extra_dependencies, fetchHtmlDep(tufte_features, tufte_variant)
       )
     )
   }
@@ -171,13 +171,11 @@ tufte_html <- function(..., tufte_features = c("fonts", "background", "italics")
 }
 
 #' @importFrom htmltools htmlDependency
-tufte_html_dependency <- function(features, variant) {
+fetchHtmlDep <- function(features, variant) {
   list(htmltools::htmlDependency(
-    "tufte-css", "2015.12.29",
-    src = template_resources(name="tufte_html"), stylesheet = c(
-      sprintf("tufte-%s.css", features), "tufte.css",
-      if (variant != "default") sprintf("%s.css", variant)
-    )
+    "scientific-r", "2024.0",
+    src = temp_loc(), stylesheet = list.files(path = temp_loc(), pattern = ".css$"),
+    script = list.files(path = temp_loc(), pattern = ".js$")
   ))
 }
 
