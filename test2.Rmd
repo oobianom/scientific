@@ -2,7 +2,7 @@
 title: "A Tufte Handout Example"
 pagetitle: "obi is a boy"
 highlighter: "Eclipse" 
-codelang: "ji ki"
+codelang: "R"
 runningheader: "Tufte Handout with R Markdown" # only for pdf output
 subtitle: "An implementation in R Markdown" # only for html output
 author: "JJ Allaire and Yihui Xie"
@@ -24,7 +24,6 @@ link-citations: yes
 ```{r setup, include=FALSE}
 library(scientific)
 # invalidate cache when the tufte version changes
-knitr::opts_chunk$set(cache.extra = packageVersion('scientific'))
 options(htmltools.dir.version = FALSE)
 ```
 
