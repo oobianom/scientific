@@ -1,7 +1,6 @@
 ---
-title: "A Tufte Handout Example"
-pagetitle: "obi is a boy"
-highlighter: "Eclipse" 
+title: "Scientific Report Example"
+highlighter: "enlighter" 
 codelang: "R"
 runningheader: "Tufte Handout with R Markdown" # only for pdf output
 subtitle: "An implementation in R Markdown" # only for html output
@@ -9,7 +8,7 @@ author: "JJ Allaire and Yihui Xie"
 date: "`r Sys.Date()`"
 output:
   scientific::tufte_html: 
-    toc: FALSE
+    toc: TRUE
     self_contained: FALSE
   scientific::tufte_handout:
     citation_package: natbib

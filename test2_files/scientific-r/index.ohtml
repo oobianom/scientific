@@ -5,14 +5,20 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="scientific" />
 $for(author-meta)$
   <meta name="author" content="$author-meta$" />
 $endfor$
 $if(date-meta)$
   <meta name="date" content="$date-meta$" />
 $endif$
-<title>$if(pagetitle)$$pagetitle$$elseif(title)$$title$$endif$</title>
+<title>
+$if(title-prefix)$$title-prefix$ - $endif$
+$if(pagetitle)$$pagetitle$
+$elseif(title)$
+$title$
+$endif$
+</title>
 <meta name="keywords" content="R personal profiles, $keywords$" />
 $if(footer)$
   <meta name="copyright" content="$footer$"/>
@@ -20,10 +26,18 @@ $endif$
 $if(font-size-adjustment)$
   <meta name="font-size-adjustment" content="$font-size-adjustment$"/>
 $endif$
-  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+
 
   <style type="text/css">
-    code{white-space: pre-wrap;}
+      .enlighter-btn{
+        display: inline-block;
+        margin: 0px 5px 0px 5px;
+        padding: 3px 5px 3px 5px;
+        border: solid 1px #333333;
+        background-color: #f0f0f0;
+        cursor: pointer;
+    }
+
     $if(quotes)$
     q { quotes: "“" "”" "‘" "’"; }
     $endif$
@@ -139,7 +153,7 @@ $endif$
 
 
     <script type="text/javascript">
-        EnlighterJS.init('pre', 'code', {
+        EnlighterJS.init('code', {
                 language : $if(codelang)$'$codelang$'$else$'R'$endif$,
                 theme: $if(highlighter)$'$highlighter$'$else$'dracula'$endif$,
                 indent : 2
