@@ -37,7 +37,7 @@ $endif$
         background-color: #f0f0f0;
         cursor: pointer;
     }
-
+    code{white-space: pre-wrap;}
     $if(quotes)$
     q { quotes: "“" "”" "‘" "’"; }
     $endif$
@@ -152,13 +152,7 @@ $if(mathjax-url)$
 $endif$
 
 
-    <script type="text/javascript">
-        EnlighterJS.init('code', {
-                language : $if(codelang)$'$codelang$'$else$'R'$endif$,
-                theme: $if(highlighter)$'$highlighter$'$else$'dracula'$endif$,
-                indent : 2
-        });
-    </script>
+
 
 
 
