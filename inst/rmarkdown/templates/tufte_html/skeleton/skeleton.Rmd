@@ -1,26 +1,21 @@
 ---
-title: "Scientific Report Writeup"
-runningheader: "Tufte Handout with R Markdown" # only for pdf output
+title: "Scientific Report Example"
+highlighter: "dracula" 
+codelang: "R" #default is R, you may add js php python and so on
+runningheader: "Scientific Report Example" # only for pdf output
 subtitle: "An implementation in R Markdown" # only for html output
-author: "Obi  Obianom"
+author: "Obinna Obianom"
 date: "`r Sys.Date()`"
 output:
-  scientific::tufte_html: default
-  scientific::tufte_handout:
-    citation_package: natbib
-    latex_engine: xelatex
-  scientific::tufte_book:
-    citation_package: natbib
-    latex_engine: xelatex
+  scientific::tufte_html: 
+    toc: TRUE
+    self_contained: FALSE
 bibliography: skeleton.bib
 link-citations: yes
 ---
 
 ```{r setup, include=FALSE}
-library(tufte)
-# invalidate cache when the tufte version changes
-knitr::opts_chunk$set(cache.extra = packageVersion('scientific'))
-options(htmltools.dir.version = FALSE)
+library(scientific)
 ```
 
 # Introduction
