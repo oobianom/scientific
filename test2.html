@@ -163,8 +163,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div class="u-gutter-0 u-layout">
       <div class="u-layout-row">
 
-                <div class="u-container-style u-layout-cell u-palette-1-base u-size-10 u-layout-cell-1">
-
+                <div class="u-container-style u-layout-cell u-palette-1-base u-size-20 u-layout-cell-1">
+          <div class="u-container-layout u-valign-top u-container-layout-1">
+            <div class="u-sticky u-header"> <ul>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#headings" id="toc-headings">Headings</a></li>
+<li><a href="#figures" id="toc-figures">Figures</a>
+<ul>
+<li><a href="#margin-figures" id="toc-margin-figures">Margin Figures</a></li>
+<li><a href="#arbitrary-margin-content" id="toc-arbitrary-margin-content">Arbitrary Margin Content</a></li>
+<li><a href="#full-width-figures" id="toc-full-width-figures">Full Width Figures</a></li>
+<li><a href="#arbitrary-full-width-content" id="toc-arbitrary-full-width-content">Arbitrary Full Width Content</a></li>
+<li><a href="#main-column-figures" id="toc-main-column-figures">Main Column Figures</a></li>
+</ul></li>
+<li><a href="#sidenotes" id="toc-sidenotes">Sidenotes</a></li>
+<li><a href="#references" id="toc-references">References</a></li>
+<li><a href="#tables" id="toc-tables">Tables</a></li>
+<li><a href="#block-quotes" id="toc-block-quotes">Block Quotes</a></li>
+<li><a href="#responsiveness" id="toc-responsiveness">Responsiveness</a></li>
+<li><a href="#more-examples" id="toc-more-examples">More Examples</a></li>
+<li><a href="#some-notes-on-tufte-css" id="toc-some-notes-on-tufte-css">Some Notes on Tufte CSS</a></li>
+</ul> </div>
+          </div>
         </div>
         
         <div class="u-container-style u-layout-cell u-size-40 u-layout-cell-2">
@@ -181,7 +201,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <div id="introduction" class="section level1">
             <h1>Introduction</h1>
-            <p>The Tufte handout style is a style that Edward Tufte uses in his books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography. This style has been implemented in LaTeX and HTML/CSS<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, respectively. We have ported both implementations into the <a href="https://github.com/rstudio/tufte"><strong>tufte</strong> package</a>. If you want LaTeX/PDF output, you may use the <code>tufte_handout</code> format for handouts, and <code>tufte_book</code> for books. For HTML output, use <code>tufte_html</code>. These formats can be either specified in the YAML metadata at the beginning of an R Markdown document (see an example below), or passed to the <code>rmarkdown::render()</code> function. See <span class="citation">Allaire et al. (<a href="#ref-R-rmarkdown" role="doc-biblioref">2023</a>)</span> for more information about <strong>rmarkdown</strong>.</p>
+            <p>The Tufte handout style is a style that Edward Tufte uses in his books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography. This style has been implemented in LaTeX and HTML/CSS<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, respectively. We have ported both implementations into the <a href="https://github.com/rstudio/tufte"><strong>tufte</strong> package</a>. If you want LaTeX/PDF output, you may use the <code>tufte_handout</code> format for handouts, and <code>tufte_book</code> for books. For HTML output, use <code>tufte_html</code>. These formats can be either specified in the YAML metadata at the beginning of an R Markdown document (see an example below), or passed to the <code>rmarkdown::render()</code> function. See <span class="citation">Allaire et al. (<a href="#ref-R-rmarkdown" role="doc-biblioref">2023</a>)</span> for more information about <strong>rmarkdown</strong>.
+            <code>library(“r2resume”)</code></p>
             <div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;An Example Using the Tufte Style&quot;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;John Smith&quot;</span></span>
@@ -795,10 +816,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
 
         
-        <div class="u-container-style u-layout-cell u-palette-1-base u-size-10 u-layout-cell-1" style="border-right-width:0px; border-left:2px solid #333333">
-          <div class="u-container-layout u-valign-top u-container-layout-1"></div>
-        </div>
-        
 
       </div>
     </div>
@@ -811,11 +828,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
   <script src="test2_files/header-attrs/header-attrs.js"></script>
-  <link href="test2_files/scientific-r/enlighterjs.min.css" rel="stylesheet" />
   <link href="test2_files/scientific-r/scientific1.css" rel="stylesheet" />
   <link href="test2_files/scientific-r/scientific2.css" rel="stylesheet" />
   <link href="test2_files/scientific-r/scientific3.css" rel="stylesheet" />
-  <script src="test2_files/scientific-r/enlighterjs.min.js"></script>
+  <link href="test2_files/scientific-r/tenlighterjs.min.css" rel="stylesheet" />
+  <script src="test2_files/scientific-r/uenlighterjs.min.js"></script>
 
 
 
