@@ -16194,73 +16194,7 @@ a.u-link.u-text-hover-grey-90:hover {
         }
 
         /** common-rules **/
-        h1.u-title
-        {
-        font-weight: 400;
-        font-size: 4.5rem;
-        line-height: 1.1;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        }
-        h2.u-subtitle
-        {
-        font-weight: 400;
-        font-size: 2.25rem;
-        line-height: 1.1;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        }
-        h1:not(.u-title)
-        {
-        font-size: 6rem;
-        line-height: 1.1;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-family: Montserrat,sans-serif;
-        font-weight: 700;
-        }
-        h2:not(.u-subtitle)
-        {
-        font-size: 3.75rem;
-        line-height: 1.1;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-family: Montserrat,sans-serif;
-        font-weight: 700;
-        }
-        h3
-        {
-        font-weight: 400;
-        font-size: 1.875rem;
-        line-height: 1.2;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        }
-        h4
-        {
-        font-weight: 400;
-        font-size: 1.5rem;
-        line-height: 1.2;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        }
-        h5
-        {
-        font-size: 1.5rem;
-        line-height: 1.2;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-family: Montserrat,sans-serif;
-        font-weight: 700;
-        }
-        h6
-        {
-        font-weight: 400;
-        font-size: 1.125rem;
-        line-height: 1.2;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        }
+
         p.u-large-text
         {
         font-size: 1.25rem;
