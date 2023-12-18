@@ -21,6 +21,7 @@ output:
     self_contained: TRUE
 link-citations: yes
 summaryslide: FALSE # whether to show summary slide on top
+lightsummaryslide: FALSE # whether to make summary slide light
 ---
 
 
