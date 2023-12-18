@@ -15,8 +15,8 @@ author: "Obinna Obianom"
 date: "`r Sys.Date()`"
 output:
   scientific::tufte_html: 
-  toc: TRUE
-  self_contained: TRUE
+    toc: TRUE
+    self_contained: TRUE
 link-citations: yes
 ---
 
