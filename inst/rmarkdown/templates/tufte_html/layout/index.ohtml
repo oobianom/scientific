@@ -153,10 +153,38 @@ $endif$
 
 
     <script type="text/javascript">
-        EnlighterJS.init('code', {
+        EnlighterJS.init('code', '',{
                 language : $if(codelang)$'$codelang$'$else$'R'$endif$,
-                theme: $if(highlighter)$'$highlighter$'$else$'dracula'$endif$,
-                indent : 2
+                theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$,
+                indent : 2,
+                // &amp; to &
+                ampersandCleanup: true,
+                // enable line hover highlighting
+                linehover: true,
+                // show linenumbers
+                linenumbers: true,
+                // copy css classes from origin element to outer wrapper
+                retainCssClasses: false,
+                // additional css classes added to outer wrapper
+                cssClasses: '',
+                // top outer toolbar
+                toolbarOuter: '{BTN_TABS}',
+                // header toolbar
+                toolbarTop: '{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}',
+                // footer toolbar
+                toolbarBottom: '{BTN_COLLAPSE}',
+                // no line offset
+                lineoffset: 0,
+                // no special line highlighting
+                highlight: '',
+                // default layout
+                layout: 'standard',
+                // or 'scroll
+                textOverflow: 'break',
+                // enable collapse / vertical scroll
+                collapse: false,
+                // default title
+                title: 'hello'
 
 
         });

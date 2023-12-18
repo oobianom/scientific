@@ -30,7 +30,7 @@ The Tufte handout style is a style that Edward Tufte uses in his books and hando
 ```
 
 
-## Highlighter options
+## Highlighter options (Enlighterjs)
 
 ```
 Enlighter (enlighter, standard) - Enlighter`s default Theme
