@@ -19,6 +19,9 @@ $elseif(title)$
 $title$
 $endif$
 </title>
+$for(header-includes)$
+  $header-includes$
+$endfor$
 <meta name="keywords" content="R personal profiles, $keywords$" />
 $if(footer)$
   <meta name="copyright" content="$footer$"/>
@@ -131,9 +134,7 @@ $endfor$
 
 
 
-$for(header-includes)$
-  $header-includes$
-$endfor$
+
 
 $for(include-after)$
 $include-after$
