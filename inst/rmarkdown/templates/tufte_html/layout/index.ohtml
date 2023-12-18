@@ -155,6 +155,20 @@ $endif$
     <script type="text/javascript">
         EnlighterJS.init('code', {
                 language : $if(codelang)$'$codelang$'$else$'R'$endif$,
+                /*
+    Enlighter (enlighter, standard) - Enlighter`s default Theme
+    Classic (classic) - SyntaxHighlighter inspired
+    Bootstrap (bootstrap4) - Bootstrap 4 inpired themes, high contrast
+    Beyond (beyond) - BeyondTechnology Theme
+    Godzilla (godzilla) - A MDN inspired Theme
+    Eclipse (eclipse) - Eclipse inspired
+    MooTwo (mootwo) - Inspired by the MooTools Website
+    Droide (droide) - Modern, minimalistic
+    Minimal (minimal) - Bright, High contrast
+    Atomic (atomic) - Dark, Colorful
+    Dracula (dracula) - Dark, using official draculatheme colorscheme
+    Rowhammer (rowhammer) - Light, Transparent, divided rows
+  */
                 theme: $if(highlighter)$'$highlighter$'$else$'dracula'$endif$,
                 indent : 2
 
@@ -186,25 +200,9 @@ $endif$
   textOverflow: 'break',
   // enable collapse / vertical scroll
   collapse: false,
-  // default language
-  language: 'generic',
   // default title
   title: ''
-  /*
-    Enlighter (enlighter, standard) - Enlighter`s default Theme
-    Classic (classic) - SyntaxHighlighter inspired
-    Bootstrap (bootstrap4) - Bootstrap 4 inpired themes, high contrast
-    Beyond (beyond) - BeyondTechnology Theme
-    Godzilla (godzilla) - A MDN inspired Theme
-    Eclipse (eclipse) - Eclipse inspired
-    MooTwo (mootwo) - Inspired by the MooTools Website
-    Droide (droide) - Modern, minimalistic
-    Minimal (minimal) - Bright, High contrast
-    Atomic (atomic) - Dark, Colorful
-    Dracula (dracula) - Dark, using official draculatheme colorscheme
-    Rowhammer (rowhammer) - Light, Transparent, divided rows
-  */
-  theme: 'enlighter',
+
   // show raw code on double click
   rawcodeDbclick: false
         });
