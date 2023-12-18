@@ -78,9 +78,18 @@ $endfor$
 
 $if(summaryslide)$
 
-<div class="u-clearfix u-grey-80" style="height:100vh;">
+<div class="u-header u-section-1 u-clearfix u-grey-80" style="height:100vh;">
   <div class="u-text-white u-container-layout u-container-layout-2">
-        Something big
+        $if(title)$ <div class="slide titlepage">
+
+              <h1 class="">$title$</h1>
+              $if(subtitle)$ <h3 class="subtitle">$subtitle$</h3> $endif$
+
+              <p class="author">
+              $for(author)$$author$$sep$ <br />$endfor$
+              </p>
+              $if(date)$ <p class="date">$date$</p> $endif$
+            </div> $endif$
   </div>
 </div>
 

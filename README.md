@@ -11,8 +11,7 @@ Take 2, a rebuild of sciRmdTheme
 ```
 ---
 title: "Scientific Report Example"
-highlighter: "dracula" 
-linenum: true # whether to show line numbers
+highlighter: "dracula" # code theme
 codelang: "r" #default is R, you may add js php python and so on
 author: "Obinna Obianom"
 date: "`r Sys.Date()`"
@@ -21,6 +20,7 @@ output:
     toc: TRUE
     self_contained: TRUE
 link-citations: yes
+summaryslide: FALSE # whether to show summary slide on top
 ---
 
 
