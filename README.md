@@ -1,6 +1,8 @@
 # Experimental scientific theme for Rmarkdown
 Report science intelligently
 
+# Website: https://scientific.obi.obianom.com/
+
 Take 2, a rebuild of sciRmdTheme
 
 
@@ -36,6 +38,9 @@ ggplot(mtcars2, aes(hp, mpg, color = am)) +
   theme(legend.position = 'bottom')
 ```
 
+# Output
+
+![](https://scientific.obi.obianom.com/screenshot/scientificscreenshot.png)
 
 
 
