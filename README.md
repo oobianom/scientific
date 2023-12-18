@@ -40,7 +40,7 @@ ggplot(mtcars2, aes(hp, mpg, color = am)) +
 
 # Output
 
-![](https://scientific.obi.obianom.com/screenshot/scientificscreenshot.png)
+![](https://scientific.obi.obianom.com/screenshot/scientificscreenshot2.png)
 
 
 
