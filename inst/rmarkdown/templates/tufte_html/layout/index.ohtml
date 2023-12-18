@@ -194,6 +194,7 @@ $endif$
     		EnlighterJS.init('python', '',{language : 'python',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
     		EnlighterJS.init('json', '',{language : 'json',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
     		EnlighterJS.init('css', '',{language : 'css',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
+    		EnlighterJS.init('yaml', '',{language : 'yaml',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
     </script>
 
 </body>
