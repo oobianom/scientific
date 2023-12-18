@@ -15,8 +15,8 @@ author: "Obinna Obianom"
 date: "`r Sys.Date()`"
 output:
   scientific::tufte_html: 
-    toc: TRUE
-    self_contained: TRUE
+toc: TRUE
+self_contained: TRUE
 bibliography: skeleton.bib
 link-citations: yes
 ---
@@ -26,4 +26,22 @@ link-citations: yes
 
 The Tufte handout style is a style that Edward Tufte uses in his books and handouts. Tufte's style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography. This style has been implemented in LaTeX and HTML/CSS
 
+```
+
+
+## Highlighter options
+
+```
+Enlighter (enlighter, standard) - Enlighter`s default Theme
+Classic (classic) - SyntaxHighlighter inspired
+Bootstrap (bootstrap4) - Bootstrap 4 inpired themes, high contrast
+Beyond (beyond) - BeyondTechnology Theme
+Godzilla (godzilla) - A MDN inspired Theme
+Eclipse (eclipse) - Eclipse inspired
+MooTwo (mootwo) - Inspired by the MooTools Website
+Droide (droide) - Modern, minimalistic
+Minimal (minimal) - Bright, High contrast
+Atomic (atomic) - Dark, Colorful
+Dracula (dracula) - Dark, using official draculatheme colorscheme
+Rowhammer (rowhammer) - Light, Transparent, divided rows
 ```
