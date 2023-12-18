@@ -40,7 +40,7 @@ ggplot(mtcars2, aes(hp, mpg, color = am)) +
 
 ## Highlighter options (Enlighterjs)
 
-```
+
 Enlighter (enlighter, standard) - Enlighter`s default Theme
 Classic (classic) - SyntaxHighlighter inspired
 Bootstrap (bootstrap4) - Bootstrap 4 inpired themes, high contrast
@@ -53,10 +53,10 @@ Minimal (minimal) - Bright, High contrast
 Atomic (atomic) - Dark, Colorful
 Dracula (dracula) - Dark, using official draculatheme colorscheme
 Rowhammer (rowhammer) - Light, Transparent, divided rows
-```
+
 
 ## Languages for `codelang`
-```
+
 ABAP (abap)
 Apache HTTPD (apache)
 Assembly (assembly, asm)
@@ -113,4 +113,4 @@ VisualBasic (visualbasic, vb)
 Verilog (verilog)
 XML (xml, html)
 YAML (yaml)
-```
+
