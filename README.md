@@ -8,7 +8,8 @@ Take 2, a rebuild of sciRmdTheme
 ```
 ---
 title: "Scientific Report Example"
-highlighter: "godzilla" 
+highlighter: "dracula" 
+linenum: true # whether to show line numbers
 codelang: "r" #default is R, you may add js php python and so on
 author: "Obinna Obianom"
 date: "`r Sys.Date()`"

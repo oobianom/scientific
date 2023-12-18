@@ -162,7 +162,7 @@ $endif$
                 // enable line hover highlighting
                 linehover: true,
                 // show linenumbers
-                linenumbers: true,
+                linenumbers: $if(linenum)$$linenum$$else$true$endif$,
                 // copy css classes from origin element to outer wrapper
                 retainCssClasses: false,
                 // additional css classes added to outer wrapper
@@ -184,7 +184,7 @@ $endif$
                 // enable collapse / vertical scroll
                 collapse: false,
                 // default title
-                title: 'hello'
+                title: ''
 
 
         });
