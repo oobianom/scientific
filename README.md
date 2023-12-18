@@ -1,7 +1,8 @@
-# Experimental scientific theme for Rmarkdown
-Report science intelligently
+# Experimental scientific theme for Rmarkdown: Report science intelligently
 
-#### Website: https://scientific.obi.obianom.com/
+#### Built to maximize space and styles
+
+### Website: https://scientific.obi.obianom.com/
 
 Take 2, a rebuild of sciRmdTheme
 
