@@ -153,7 +153,7 @@ $endif$
 
 
     <script type="text/javascript">
-        EnlighterJS.init('code', '',{
+        EnlighterJS.init('pre code', '',{
                 language : $if(codelang)$'$codelang$'$else$'R'$endif$,
                 theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$,
                 indent : 2,
@@ -170,9 +170,9 @@ $endif$
                 // top outer toolbar
                 toolbarOuter: '{BTN_TABS}',
                 // header toolbar
-                toolbarTop: '{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}',
+                toolbarTop: '{BTN_RAW}{BTN_COPY}{BTN_WINDOW}',
                 // footer toolbar
-                toolbarBottom: '{BTN_COLLAPSE}',
+                toolbarBottom: '',
                 // no line offset
                 lineoffset: 0,
                 // no special line highlighting
