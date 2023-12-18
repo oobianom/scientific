@@ -35,7 +35,7 @@ ggplot(mtcars2, aes(hp, mpg, color = am)) +
   theme(legend.position = 'bottom')
 ```
 
-```
+
 
 
 ## Highlighter options (Enlighterjs)
