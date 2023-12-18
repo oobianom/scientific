@@ -4,6 +4,7 @@ Report science intelligently
 Take 2, a rebuild of sciRmdTheme
 
 
+## Example .Rmd
 ```
 ---
 title: "Scientific Report Example"
