@@ -9,13 +9,13 @@ Take 2, a rebuild of sciRmdTheme
 ---
 title: "Scientific Report Example"
 highlighter: "godzilla" 
-codelang: "R" #default is R, you may add js php python and so on
+codelang: "r" #default is R, you may add js php python and so on
 author: "Obinna Obianom"
 date: "`r Sys.Date()`"
 output:
   scientific::tufte_html: 
-toc: TRUE
-self_contained: TRUE
+  toc: TRUE
+  self_contained: TRUE
 link-citations: yes
 ---
 
@@ -24,7 +24,7 @@ link-citations: yes
 
 Sample text implemented in LaTeX and HTML/CSS
 
-```{r fig-margin, fig.margin = TRUE, fig.cap = "MPG vs horsepower, colored by transmission.", fig.width=3.5, fig.height=3.5, cache=TRUE, message=FALSE}
+```{r, message=FALSE}
 library(ggplot2)
 mtcars2 <- mtcars
 mtcars2$am <- factor(
@@ -53,4 +53,64 @@ Minimal (minimal) - Bright, High contrast
 Atomic (atomic) - Dark, Colorful
 Dracula (dracula) - Dark, using official draculatheme colorscheme
 Rowhammer (rowhammer) - Light, Transparent, divided rows
+```
+
+## Languages for `codelang`
+```
+ABAP (abap)
+Apache HTTPD (apache)
+Assembly (assembly, asm)
+AVR Assembly (avrassembly, avrasm)
+Windows Batch/Bat (bat,batch,cmd)
+C/C++ (c,cpp, c++)
+C# (csharp)
+CSS (css)
+Cython (cython)
+CordPro (cordpro)
+diff (diff)
+Dockerfile (docker, dockerfile)
+Generic (generic, standard) - default highlighting scheme
+Groovy (groovy)
+Go (go, golang)
+HTML (html)
+Ini (ini, conf)
+Java (java)
+Javascript (js, javascript, jquery, mootools, ext.js)
+JSON (json)
+JSX (jsx)
+Kotlin (kotlin)
+LATEX (latex)
+LESS (less)
+lighttpd (lighttpd)
+LUA (lua)
+MariaDB (mariadb)
+Markdown (gfm, md, markdown)
+Matlab/Octave (octave, matlab)
+MSSQL (mssql)
+NGINX (nginx)
+NSIS (nsis)
+Oracle Database (oracledb)
+PHP (php)
+Powerhsell (powershell)
+Prolog (prolog)
+Python (py, python)
+PureBasic (purebasic, pb)
+QML (qml)
+R (r)
+RAW (raw) - raw code without highlighting with EnlighterJS container styles!
+RouterOS/SwitchOS (routeros)
+Ruby (ruby)
+Rust (rust)
+Scala (scala)
+SCSS (scss, sass)
+Shellscript (shell, bash)
+Generic SQL (sql)
+Squirrel (squirrel)
+Swift (swift)
+Typescript (typescript)
+VHDL (vhdl)
+VisualBasic (visualbasic, vb)
+Verilog (verilog)
+XML (xml, html)
+YAML (yaml)
 ```
