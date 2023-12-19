@@ -20,8 +20,16 @@ output:
     toc: TRUE
     self_contained: TRUE
 link-citations: yes
-summaryslide: FALSE # whether to show summary slide on top
+summaryslide: TRUE # whether to show summary slide on top
 lightsummaryslide: FALSE # whether to make summary slide light
+summarypoints:
+    - Fusce id velit ut tortor pretium viverra. Lectus urna duis convallis convallis tellus id interdum. 
+    - Erat imperdiet sed euismod nisi porta lorem. Sed viverra tellus in hac habitasse platea dictumst. 
+    - Turpis egestas integer eget aliquet nibh praesent tristique. Ultricies integer quis auctor elit. 
+    - Dictum varius duis at consectetur lorem donec massa. Convallis aenean et tortor at risus viverra. 
+    - Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Aliquet bibendum enim facilisis gravida neque. 
+    - Porta lorem mollis aliquam ut porttitor leo a diam. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. 
+    - Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Risus feugiat in ante metus dictum. 
 ---
 
 

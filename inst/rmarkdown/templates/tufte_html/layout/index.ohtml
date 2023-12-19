@@ -90,6 +90,13 @@ $if(summaryslide)$
               </p>
               $if(date)$ <p class="date">$date$</p> $endif$
             </div> $endif$
+
+            <h3 class="">Executive Summary</h3>
+            <ul>
+            $for(summarypoints)$
+            <li>$summarypoints$</li>
+            $endfor$
+            </ul>
   </div>
 </div>
 
