@@ -78,8 +78,8 @@ $endfor$
 
 $if(summaryslide)$
 
-<div class="u-valign-middle u-header u-section-1 u-clearfix $if(lightsummaryslide)$$else$u-grey-80$endif$" style="height:100vh;$if(lightsummaryslide)$border-bottom:2px solid #333333; border-top:2px solid #333333;$endif$font-size:1.75vw">
-  <div class="$if(lightsummaryslide)$$else$u-text-white$endif$ u-container-layout u-container-layout-2">
+<div class="u-header u-section-1 u-clearfix $if(lightsummaryslide)$$else$u-grey-80$endif$" style="height:100vh;$if(lightsummaryslide)$border-bottom:2px solid #333333; border-top:2px solid #333333;$endif$font-size:1.75vw">
+  <div class="u-valign-middle $if(lightsummaryslide)$$else$u-text-white$endif$ u-container-layout u-container-layout-2">
         $if(title)$ <div class="slide titlepage">
 
               <h1 class="">$title$</h1>
