@@ -2,7 +2,7 @@
 
 #### Built to maximize space and styles
 
-### Website: https://scientific.obi.obianom.com/
+### Example output: https://scientific.obi.obianom.com/
 
 Take 2, a rebuild of sciRmdTheme
 
