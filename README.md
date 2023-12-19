@@ -56,7 +56,7 @@ ggplot(mtcars2, aes(hp, mpg, color = am)) +
 
 ## Highlighter options (Enlighterjs)
 
-```
+```{r}
 Enlighter (enlighter, standard) - Enlighter`s default Theme
 Classic (classic) - SyntaxHighlighter inspired
 Bootstrap (bootstrap4) - Bootstrap 4 inpired themes, high contrast
