@@ -2,6 +2,14 @@
 
 #### Built to maximize space and styles
 
+```r
+# install
+remotes::install_github("oobianom/scientific")
+
+# load library
+library(scientific)
+```
+
 ### Example output: https://scientific.obi.obianom.com/
 
 Take 2, a rebuild of sciRmdTheme
