@@ -1,4 +1,4 @@
-# Towards a Streamlined Scientific Reporting: Rmarkdown and Shiny Templates for Scientists
+# Towards Streamlined Scientific Reporting: Rmarkdown and Shiny Templates for Scientists
 
 #### Built to maximize efficiency, space and style
 
