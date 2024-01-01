@@ -1,6 +1,6 @@
-# Experimental scientific theme for Rmarkdown: Report science intelligently
+# Towards a Streamlined Scientific Reporting: Rmarkdown and Shiny Templates for Scientists
 
-#### Built to maximize space and styles
+#### Built to maximize efficiency, space and style
 
 ```r
 # install
