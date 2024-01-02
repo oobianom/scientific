@@ -455,3 +455,8 @@ h6, .h6 { font-size: 1rem; }
     padding-right: 10px;
   }
 }
+
+
+img, table {
+    max-width: 100%!important;
+}
