@@ -26,7 +26,7 @@ codelang: "r" #default is R, you may add js php python and so on
 author: "Obinna Obianom"
 date: "`r Sys.Date()`"
 output:
-  scientific::tufte_html: 
+  scientific::html: 
     toc: TRUE
     self_contained: TRUE
 link-citations: yes

@@ -7,7 +7,7 @@ subtitle: "An implementation in R Markdown" # only for html output
 author: "Obinna Obianom"
 date: "`r Sys.Date()`"
 output:
-  scientific::tufte_html: 
+  scientific::html: 
     toc: TRUE
     self_contained: FALSE
 bibliography: skeleton.bib
@@ -20,15 +20,15 @@ library(scientific)
 
 # Introduction
 
-The Tufte handout style is a style that Edward Tufte uses in his books and handouts. Tufte's style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography. This style has been implemented in LaTeX and HTML/CSS^[See Github repositories [tufte-latex](https://github.com/tufte-latex/tufte-latex) and [tufte-css](https://github.com/edwardtufte/tufte-css)], respectively. We have ported both implementations into the [**tufte** package](https://github.com/rstudio/tufte). If you want LaTeX/PDF output, you may use the `tufte_handout` format for handouts, and `tufte_book` for books. For HTML output, use `tufte_html`. These formats can be either specified in the YAML metadata at the beginning of an R Markdown document (see an example below), or passed to the `rmarkdown::render()` function. See @R-rmarkdown for more information about **rmarkdown**.
+The Tufte handout style is a style that Edward Tufte uses in his books and handouts. Tufte's style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography. This style has been implemented in LaTeX and HTML/CSS^[See Github repositories [tufte-latex](https://github.com/tufte-latex/tufte-latex) and [tufte-css](https://github.com/edwardtufte/tufte-css)], respectively. We have ported both implementations into the [**tufte** package](https://github.com/rstudio/tufte). If you want LaTeX/PDF output, you may use the `handout` format for handouts, and `tufte_book` for books. For HTML output, use `html`. These formats can be either specified in the YAML metadata at the beginning of an R Markdown document (see an example below), or passed to the `rmarkdown::render()` function. See @R-rmarkdown for more information about **rmarkdown**.
 
 ```yaml
 ---
 title: "An Example Using the Tufte Style"
 author: "John Smith"
 output:
-  tufte::tufte_handout: default
-  tufte::tufte_html: default
+  tufte::handout: default
+  tufte::html: default
 ---
 ```
 
@@ -225,7 +225,7 @@ You can turn on/off some features of the Tufte style in HTML output. The default
 
 ```yaml
 output:
-  tufte::tufte_html:
+  tufte::html:
     tufte_features: ["fonts", "background", "italics"]
 ```
 
@@ -241,16 +241,16 @@ in, say, a CSS file `my_style.css` (under the same directory of your Rmd documen
 
 ```yaml
 output:
-  tufte::tufte_html:
+  tufte::html:
     tufte_features: ["fonts", "background"]
     css: "my_style.css"
 ```
 
-There is also a variant of the Tufte style in HTML/CSS named "[Envisoned CSS](https://github.com/nogginfuel/envisioned-css)". This style can be used by specifying the argument `tufte_variant = 'envisioned'` in `tufte_html()`^[The actual Envisioned CSS was not used in the **tufte** package. We only changed the fonts, background color, and text color based on the default Tufte style.], e.g.
+There is also a variant of the Tufte style in HTML/CSS named "[Envisoned CSS](https://github.com/nogginfuel/envisioned-css)". This style can be used by specifying the argument `tufte_variant = 'envisioned'` in `html()`^[The actual Envisioned CSS was not used in the **tufte** package. We only changed the fonts, background color, and text color based on the default Tufte style.], e.g.
 
 ```yaml
 output:
-  tufte::tufte_html:
+  tufte::html:
     tufte_variant: "envisioned"
 ```
 

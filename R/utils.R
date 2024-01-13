@@ -1,5 +1,5 @@
 .onLoad <- function(lib, pkg) {
-  # this engine will be overridden in tufte_html/tufte_handout formats
+  # this engine will be overridden in html/handout formats
   knitr::knit_engines$set(marginfigure = function(options) {
     'Placeholder (you should not see this)'
   })
@@ -15,7 +15,7 @@
 #'   (\samp{\\newthought{text}}) output.
 #' @param text A character string to be presented as a \dQuote{new thought}
 #'   (using small caps), or a margin note, or a footer of a quote
-#' @rdname tufte_handout
+#' @rdname handout
 #' @export
 #' @examples newthought("In this section")
 newthought <- function(text) {
@@ -32,7 +32,7 @@ newthought <- function(text) {
 #'   margin note (like a sidenote but not numbered).
 #' @param icon A character string to indicate there is a hidden margin note when
 #'   the page width is too narrow (by default it is a circled plus sign)
-#' @rdname tufte_handout
+#' @rdname handout
 #' @importFrom knitr is_html_output is_latex_output
 #' @export
 margin_note <- function(text, icon = "&#8853;") {
@@ -49,7 +49,7 @@ margin_note <- function(text, icon = "&#8853;") {
 #' @details `quote_footer()` formats text as the footer of a quote. It puts
 #'   `text` in \samp{<footer></footer>} for HTML output, and
 #'   after \samp{\\hfill} for LaTeX output (to right-align text).
-#' @rdname tufte_handout
+#' @rdname handout
 #' @export
 quote_footer <- function(text) {
   if (is_html_output()) {
@@ -63,7 +63,7 @@ quote_footer <- function(text) {
 }
 
 #' @details `sans_serif()` applies sans-serif fonts to `text`.
-#' @rdname tufte_handout
+#' @rdname handout
 #' @export
 sans_serif <- function(text) {
   if (is_html_output()) {
@@ -76,7 +76,7 @@ sans_serif <- function(text) {
   }
 }
 
-temp_loc <- function(which = "tufte_html/layout") {
+temp_loc <- function(which = "html/layout") {
   system.file("rmarkdown", "templates", which, package = .packageName)
 }
 

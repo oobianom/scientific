@@ -10,7 +10,7 @@
 
 # CHANGES IN tufte VERSION 0.11
 
-- Fix an issue with Pandoc's table support in `tufte_handout()` (thanks, @chrisjake, #104).
+- Fix an issue with Pandoc's table support in `handout()` (thanks, @chrisjake, #104).
 
 - Fix an issue with Pandoc's citation processing by updating latex template (thanks, @rmcd1024, #106).
 
@@ -22,13 +22,13 @@
 
 - Add the missing `CSLReferences` environment in the template required by Pandoc 2.11+ and its new citeproc (#89)
 
-- `tufte_handout()` now uses default `tidy` knitr option, which is `FALSE`. It can be changed with `knitr::opts_chunk$set(tidy = TRUE)` and requires in that case the **formatR** package.
+- `handout()` now uses default `tidy` knitr option, which is `FALSE`. It can be changed with `knitr::opts_chunk$set(tidy = TRUE)` and requires in that case the **formatR** package.
 
 # CHANGES IN tufte VERSION 0.8
 
 - References are now moved in the margin correctly with Pandoc 2.11 (#86).
 
-- Add a `runningheader` variable in the template for `tufte_handout()` and `tufte_book()` to have a different running header than the title if provided. (#82)
+- Add a `runningheader` variable in the template for `handout()` and `tufte_book()` to have a different running header than the title if provided. (#82)
 
 # CHANGES IN tufte VERSION 0.7
 
@@ -64,15 +64,15 @@
 
 ## NEW FEATURES
 
-- It is possible to select a subset of some features of the default Tufte style (`tufte-css`) via the `tufte_features` argument of `tufte_html()`:
+- It is possible to select a subset of some features of the default Tufte style (`tufte-css`) via the `tufte_features` argument of `html()`:
 
     - Disable the `et-book` fonts.
     - Remove the default light-yellow background color.
     - Use italics for document headers or not.
 
-- A new variant of the Tufte style, `envisioned`, is added to `tufte_html()`. You can use `tufte_html(tufte_variant = 'envisioned')` to enable this style. The major difference with the default Tufte style is: the font family is `Roboto Condensed`, the background color is `#fefefe`, and the text color is `#222` (thanks, @eddelbuettel, #21).
+- A new variant of the Tufte style, `envisioned`, is added to `html()`. You can use `html(tufte_variant = 'envisioned')` to enable this style. The major difference with the default Tufte style is: the font family is `Roboto Condensed`, the background color is `#fefefe`, and the text color is `#222` (thanks, @eddelbuettel, #21).
 
-- You can choose whether references from citations should be placed in the document margins or at the bottom using the `margin_references` argument of `tufte_html()` (thanks, @stefanfritsch, #49).
+- You can choose whether references from citations should be placed in the document margins or at the bottom using the `margin_references` argument of `html()` (thanks, @stefanfritsch, #49).
 
 ## BUG FIXES
 
@@ -90,7 +90,7 @@
 
 ## BUG FIXES
 
-- the default LaTeX template for `tufte_handout()` may not work when the LaTeX
+- the default LaTeX template for `handout()` may not work when the LaTeX
   package **soul** is installed, or **ifxetex**/**xltxtra** are not installed
 
 - the `number_sections` option did not work for LaTeX output
@@ -99,5 +99,5 @@
 
 ## NEW FEATURES
 
-- added three output formats for R Markdown: `tufte_html()`, `tufte_handout()`, 
+- added three output formats for R Markdown: `html()`, `handout()`, 
 and `tufte_book()`

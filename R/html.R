@@ -1,4 +1,4 @@
-#' @details `tufte_html()` provides the HTML format based on the Tufte CSS:
+#' @details `html()` provides the HTML format based on the Tufte CSS:
 #'   <https://edwardtufte.github.io/tufte-css/>.
 #' @param tufte_features A character vector of style features to enable:
 #'   `fonts` stands for the `et-book` fonts in the `tufte-css`
@@ -14,9 +14,9 @@
 #'   sets the font family to `Roboto Condensed`, and changed the
 #'   background/foreground colors).
 #' @param margin_references Whether to place citations in margin notes.
-#' @rdname tufte_handout
+#' @rdname handout
 #' @export
-tufte_html <- function(..., tufte_features = c("fonts", "background", "italics"),
+html <- function(..., tufte_features = c("fonts", "background", "italics"),
                        tufte_variant = c("default", "envisioned"), margin_references = TRUE) {
   tufte_variant <- match.arg(tufte_variant)
   if (missing(tufte_features) && tufte_variant != "default") {
@@ -25,7 +25,7 @@ tufte_html <- function(..., tufte_features = c("fonts", "background", "italics")
   html_document2 <- function(..., extra_dependencies = list()) {
     rmarkdown::html_document(
       ...,
-      template = system.file("rmarkdown", "templates", "tufte_html", "layout","index.ohtml", package = .packageName),
+      template = system.file("rmarkdown", "templates", "html", "layout","index.ohtml", package = .packageName),
       extra_dependencies = c(
         extra_dependencies, fetchHtmlDep(tufte_features, tufte_variant)
       )

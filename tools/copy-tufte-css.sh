@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd inst/rmarkdown/templates/tufte_html/resources/
+cd inst/rmarkdown/templates/html/resources/
 cp ../../../../../../tufte-css/{tufte.css,LICENSE} ./
 [ ! -d et-book ] && mkdir et-book
 find ../../../../../../tufte-css/et-book -type f -name \*.ttf -exec cp {} et-book/ \;
