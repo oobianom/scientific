@@ -23,6 +23,7 @@ Take 2, a rebuild of sciRmdTheme
 title: "Scientific Report Example"
 highlighter: "dracula" # code theme
 codelang: "r" #default is R, you may add js php python and so on
+themecolor: brown #specify a theme color
 author: "Obinna Obianom"
 date: "`r Sys.Date()`"
 output:

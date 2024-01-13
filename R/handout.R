@@ -1,33 +1,31 @@
 #' Scientific handout formats (PDF and HTML)
 #'
-#' Templates for creating handouts according to the style of Edward R. Tufte and
-#' Richard Feynman.
+#' Template for creating scientific handout
 #'
-#' `handout()` provides the PDF format based on the Tufte-LaTeX
-#' class: <https://tufte-latex.github.io/tufte-latex/>.
+#' `handout()` provides the PDF format
+#'
 #' @inheritParams rmarkdown::pdf_document
 #' @param ... Other arguments to be passed to [pdf_document()] or
 #'   [html_document()] (note you cannot use the `template`
 #'   argument in `handout` or the `theme` argument in
 #'   `html()`; these arguments have been set internally)
-#' @references See <https://rstudio.github.io/tufte/> for an example.
 #' @export
 #' @examples library(scientific)
 handout <- function(fig_width = 4, fig_height = 2.5, fig_crop = TRUE, dev = "pdf",
                           highlight = "default", ...) {
-  tufte_pdf("tufte-handout", fig_width, fig_height, fig_crop, dev, highlight, ...)
+  pdf("handout", fig_width, fig_height, fig_crop, dev, highlight, ...)
 }
 
 #' @rdname handout
 #' @export
 tufte_book <- function(fig_width = 4, fig_height = 2.5, fig_crop = TRUE, dev = "pdf",
                        highlight = "default", ...) {
-  tufte_pdf("tufte-book", fig_width, fig_height, fig_crop, dev, highlight, ...)
+  pdf("book", fig_width, fig_height, fig_crop, dev, highlight, ...)
 }
 
-tufte_pdf <- function(documentclass = c("tufte-handout", "tufte-book"), fig_width = 4, fig_height = 2.5,
+pdf <- function(documentclass = c("handout", "book"), fig_width = 4, fig_height = 2.5,
                       fig_crop = TRUE, dev = "pdf", highlight = "default",
-                      template = temp_loc("handout", "tufte-handout.tex"), ...) {
+                      template = temp_loc("handout", "handout.tex"), ...) {
 
   # resolve default highlight
   if (identical(highlight, "default")) highlight <- "pygments"
@@ -42,7 +40,7 @@ tufte_pdf <- function(documentclass = c("tufte-handout", "tufte-book"), fig_widt
   documentclass <- match.arg(documentclass)
   format$pandoc$args <- c(
     format$pandoc$args, "--variable", paste0("documentclass:", documentclass),
-    if (documentclass == "tufte-book") {
+    if (documentclass == "book") {
       if (pandoc2.0()) "--top-level-division=chapter" else "--chapters"
     }
   )

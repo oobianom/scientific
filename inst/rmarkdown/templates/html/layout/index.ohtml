@@ -47,6 +47,9 @@ $endif$
     .usethemebg{
       background-color: var(--primary-theme-col1);
     }
+    a:active,a{
+      color: var(--primary-theme-col1);
+    }
     code{white-space: pre-wrap;}
     $if(quotes)$
     q { quotes: "“" "”" "‘" "’"; }
