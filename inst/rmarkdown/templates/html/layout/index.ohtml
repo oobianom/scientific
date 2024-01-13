@@ -41,6 +41,12 @@ $endif$
         background-color: #f0f0f0;
         cursor: pointer;
     }
+    :root{
+     --primary-theme-col1: $if(themecolor)$$themecolor$$else$#333333$endif$;
+    }
+    .usethemebg{
+      background-color: var(--primary-theme-col1);
+    }
     code{white-space: pre-wrap;}
     $if(quotes)$
     q { quotes: "“" "”" "‘" "’"; }
@@ -79,7 +85,7 @@ $endfor$
 
 $if(summaryslide)$
 
-<div class="u-header u-section-1 u-clearfix $if(lightsummaryslide)$$else$u-grey-80$endif$" style="height:100vh;$if(lightsummaryslide)$border-bottom:2px solid #333333; border-top:2px solid #333333;$endif$font-size:1.75vw">
+<div class="u-header usethemebg u-section-1 u-clearfix $if(lightsummaryslide)$$else$u-grey-80$endif$" style="height:100vh;$if(lightsummaryslide)$border-bottom:2px solid var(--primary-theme-col1); border-top:2px solid var(--primary-theme-col1);$endif$font-size:1.75vw">
   <div class="u-valign-middle $if(lightsummaryslide)$$else$u-text-white$endif$ u-container-layout u-container-layout-2">
         $if(title)$ <div class="slide titlepage">
 

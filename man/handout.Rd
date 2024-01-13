@@ -8,7 +8,7 @@
 \alias{margin_note}
 \alias{quote_footer}
 \alias{sans_serif}
-\title{Tufte handout formats (PDF and HTML)}
+\title{Scientific handout formats (PDF and HTML)}
 \usage{
 handout(
   fig_width = 4,
@@ -127,7 +127,7 @@ after \samp{\\hfill} for LaTeX output (to right-align text).
 \code{sans_serif()} applies sans-serif fonts to \code{text}.
 }
 \examples{
-library(tufte)
+library(scientific)
 newthought("In this section")
 }
 \references{
