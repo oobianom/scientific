@@ -1,4 +1,4 @@
-#' Tufte handout formats (PDF and HTML)
+#' Scientific handout formats (PDF and HTML)
 #'
 #' Templates for creating handouts according to the style of Edward R. Tufte and
 #' Richard Feynman.
@@ -12,7 +12,7 @@
 #'   `html()`; these arguments have been set internally)
 #' @references See <https://rstudio.github.io/tufte/> for an example.
 #' @export
-#' @examples library(tufte)
+#' @examples library(scientific)
 handout <- function(fig_width = 4, fig_height = 2.5, fig_crop = TRUE, dev = "pdf",
                           highlight = "default", ...) {
   tufte_pdf("tufte-handout", fig_width, fig_height, fig_crop, dev, highlight, ...)
