@@ -18,7 +18,7 @@ handout <- function(fig_width = 4, fig_height = 2.5, fig_crop = TRUE, dev = "pdf
 
 #' @rdname handout
 #' @export
-tufte_book <- function(fig_width = 4, fig_height = 2.5, fig_crop = TRUE, dev = "pdf",
+book <- function(fig_width = 4, fig_height = 2.5, fig_crop = TRUE, dev = "pdf",
                        highlight = "default", ...) {
   pdf("book", fig_width, fig_height, fig_crop, dev, highlight, ...)
 }

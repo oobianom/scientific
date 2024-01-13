@@ -20,15 +20,15 @@ library(scientific)
 
 # Introduction
 
-The Tufte handout style is a style that Edward Tufte uses in his books and handouts. Tufte's style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography. This style has been implemented in LaTeX and HTML/CSS^[See Github repositories [tufte-latex](https://github.com/tufte-latex/tufte-latex) and [tufte-css](https://github.com/edwardtufte/tufte-css)], respectively. We have ported both implementations into the [**tufte** package](https://github.com/rstudio/tufte). If you want LaTeX/PDF output, you may use the `handout` format for handouts, and `tufte_book` for books. For HTML output, use `html`. These formats can be either specified in the YAML metadata at the beginning of an R Markdown document (see an example below), or passed to the `rmarkdown::render()` function. See @R-rmarkdown for more information about **rmarkdown**.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. These formats can be either specified in the YAML metadata at the beginning of an R Markdown document (see an example below), or passed to the `rmarkdown::render()` function. See @R-rmarkdown for more information about **rmarkdown**.
 
 ```yaml
 ---
 title: "An Example Using the Tufte Style"
 author: "John Smith"
 output:
-  tufte::handout: default
-  tufte::html: default
+  scientific::handout: default
+  scientific::html: default
 ---
 ```
 
@@ -43,7 +43,7 @@ If you have any feature requests or find bugs in **tufte**, please do not hesita
 
 This style provides first and second-level headings (that is, `#` and `##`), demonstrated in the next section. You may get unexpected output if you try to use `###` and smaller headings.
 
-`r newthought('In his later books')`^[[Beautiful Evidence](https://www.edwardtufte.com/tufte/books_be)], Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, call the `newthought()` function in **tufte** in an _inline R expression_ `` `r ` `` as demonstrated at the beginning of this paragraph.^[Note you should not assume **tufte** has been attached to your R session. You should either `library(tufte)` in your R Markdown document before you call `newthought()`, or use `tufte::newthought()`.]
+`r newthought('In his later books')`^[[Beautiful Evidence](https://www.edwardtufte.com/tufte/books_be)], Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, call the `newthought()` function in **tufte** in an _inline R expression_ `` `r ` `` as demonstrated at the beginning of this paragraph.^[Note you should not assume **tufte** has been attached to your R session. You should either `library(tufte)` in your R Markdown document before you call `newthought()`, or use `scientific::newthought()`.]
 
 # Figures
 
@@ -144,7 +144,7 @@ We know from the Markdown syntax that paragraphs that start with `>` are convert
 
 > "If it weren't for my lawyer, I'd still be in prison. It went a lot faster with two people digging."
 >
-> `r tufte::quote_footer('--- Joe Martin')`
+> `r scientific::quote_footer('--- Joe Martin')`
 
 Without using `quote_footer()`, it looks like this (the second line is just a normal paragraph):
 
@@ -225,7 +225,7 @@ You can turn on/off some features of the Tufte style in HTML output. The default
 
 ```yaml
 output:
-  tufte::html:
+  scientific::html:
     tufte_features: ["fonts", "background", "italics"]
 ```
 
@@ -241,7 +241,7 @@ in, say, a CSS file `my_style.css` (under the same directory of your Rmd documen
 
 ```yaml
 output:
-  tufte::html:
+  scientific::html:
     tufte_features: ["fonts", "background"]
     css: "my_style.css"
 ```
@@ -250,8 +250,7 @@ There is also a variant of the Tufte style in HTML/CSS named "[Envisoned CSS](ht
 
 ```yaml
 output:
-  tufte::html:
-    tufte_variant: "envisioned"
+  scientific::html
 ```
 
 

@@ -28,7 +28,7 @@
 
 - References are now moved in the margin correctly with Pandoc 2.11 (#86).
 
-- Add a `runningheader` variable in the template for `handout()` and `tufte_book()` to have a different running header than the title if provided. (#82)
+- Add a `runningheader` variable in the template for `handout()` and `book()` to have a different running header than the title if provided. (#82)
 
 # CHANGES IN tufte VERSION 0.7
 
@@ -56,7 +56,7 @@
 
 ## BUG FIXES
 
-- Should use the Pandoc argument `--top-level-division=chapter` instead of `--chapters` for `tufte_book()` (thanks, @jtth, #52).
+- Should use the Pandoc argument `--top-level-division=chapter` instead of `--chapters` for `book()` (thanks, @jtth, #52).
 
 - Processing of multi-line footnotes fails with the Pandoc option `--wrap preserve` (thanks, @aoles, #57 #58).
 
@@ -100,4 +100,4 @@
 ## NEW FEATURES
 
 - added three output formats for R Markdown: `html()`, `handout()`, 
-and `tufte_book()`
+and `book()`

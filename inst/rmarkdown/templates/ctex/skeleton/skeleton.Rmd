@@ -5,7 +5,7 @@ author: "JJ Allaire，谢益辉"
 date: "`r Sys.Date()`"
 output:
   tufte::html: default
-  tufte::tufte_book:
+  tufte::book:
     citation_package: natbib
     latex_engine: xelatex
   tufte::handout:
@@ -26,7 +26,7 @@ options(htmltools.dir.version = FALSE)
 
 # 引言
 
-Tufte样式在Edward Tufte的书以及物理学家费曼的教科书很常见，它的一个显著特点就是边栏的使用。例如脚注和边栏注解，以及放在边栏里的小型插图。Tufte样式在LaTeX和HTML/CSS中都有实现^[参见Github库[tufte-latex](https://github.com/tufte-latex/tufte-latex)和 [tufte-css](https://github.com/edwardtufte/tufte-css)]。我们将这两种实现都纳入了[**tufte**包](https://github.com/rstudio/tufte)。若需要LaTeX/PDF输出，使用输出格式`handout`即可，类似地，`tufte_book`可以用来输出PDF书，`html`生成HTML网页。这些输出格式可以在YAML元数据中指定，或者传给`rmarkdown::render()`函数。若对**rmarkdown**包不熟悉，可参见 @R-rmarkdown。
+Tufte样式在Edward Tufte的书以及物理学家费曼的教科书很常见，它的一个显著特点就是边栏的使用。例如脚注和边栏注解，以及放在边栏里的小型插图。Tufte样式在LaTeX和HTML/CSS中都有实现^[参见Github库[tufte-latex](https://github.com/tufte-latex/tufte-latex)和 [tufte-css](https://github.com/edwardtufte/tufte-css)]。我们将这两种实现都纳入了[**tufte**包](https://github.com/rstudio/tufte)。若需要LaTeX/PDF输出，使用输出格式`handout`即可，类似地，`book`可以用来输出PDF书，`html`生成HTML网页。这些输出格式可以在YAML元数据中指定，或者传给`rmarkdown::render()`函数。若对**rmarkdown**包不熟悉，可参见 @R-rmarkdown。
 
 ```yaml
 ---

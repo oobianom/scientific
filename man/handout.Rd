@@ -2,7 +2,7 @@
 % Please edit documentation in R/handout.R, R/html.R, R/utils.R
 \name{handout}
 \alias{handout}
-\alias{tufte_book}
+\alias{book}
 \alias{html}
 \alias{newthought}
 \alias{margin_note}
@@ -19,7 +19,7 @@ handout(
   ...
 )
 
-tufte_book(
+book(
   fig_width = 4,
   fig_height = 2.5,
   fig_crop = TRUE,
@@ -97,12 +97,10 @@ background/foreground colors).}
 the page width is too narrow (by default it is a circled plus sign)}
 }
 \description{
-Templates for creating handouts according to the style of Edward R. Tufte and
-Richard Feynman.
+Template for creating scientific handout
 }
 \details{
-\code{handout()} provides the PDF format based on the Tufte-LaTeX
-class: \url{https://tufte-latex.github.io/tufte-latex/}.
+\code{handout()} provides the PDF format
 
 \code{html()} provides the HTML format based on the Tufte CSS:
 \url{https://edwardtufte.github.io/tufte-css/}.
@@ -129,7 +127,4 @@ after \samp{\\hfill} for LaTeX output (to right-align text).
 \examples{
 library(scientific)
 newthought("In this section")
-}
-\references{
-See \url{https://rstudio.github.io/tufte/} for an example.
 }
