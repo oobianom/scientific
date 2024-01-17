@@ -1,11 +1,11 @@
 Type: Package
 Package: scientific
-Title: Scientific Themed Reporting for R Markdown
+Title: Elegant Scientific Themed Reporting for 'Markdown'
 Version: 2024.0
 Authors@R: c(
     person("Obinna", "Obianom", email = "idonshayo@gmail.com", role = c("aut", "cre")))
 Maintainer: Obinna Obianom <idonshayo@gmail.com>
-Description: Offers R Markdown output formats designed with various scientific styles, allowing users to generate PDF and HTML outputs. The output has a contemporary appearance with vibrant visuals, providing numerous styles for effective highlighting. The package also includes additional features specifically tailored for front-page slides, enhancing the overall presentation and customization options.
+Description: Offers 'markdown' output formats designed with various scientific styles, allowing users to generate PDF and HTML outputs. The output has a contemporary appearance with vibrant visuals, providing numerous styles for effective highlighting. The package also includes additional features specifically tailored for front-page slides, enhancing the overall presentation and customization options. The package was created using the 'tufte' <https://rstudio.github.io/tufte/> package code as a starting point.
 License: MIT + file LICENSE
 URL: https://scientific.obi.obianom.com
 BugReports: https://github.com/oobianom/scientific/issues

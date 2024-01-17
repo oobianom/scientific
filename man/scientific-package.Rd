@@ -4,9 +4,9 @@
 \name{scientific-package}
 \alias{scientific}
 \alias{scientific-package}
-\title{scientific: Scientific Themed Reporting for R Markdown}
+\title{scientific: Elegant Scientific Themed Reporting for 'Markdown'}
 \description{
-Offers R Markdown output formats designed with various scientific styles, allowing users to generate PDF and HTML outputs. The output has a contemporary appearance with vibrant visuals, providing numerous styles for effective highlighting. The package also includes additional features specifically tailored for front-page slides, enhancing the overall presentation and customization options.
+Offers 'markdown' output formats designed with various scientific styles, allowing users to generate PDF and HTML outputs. The output has a contemporary appearance with vibrant visuals, providing numerous styles for effective highlighting. The package also includes additional features specifically tailored for front-page slides, enhancing the overall presentation and customization options. The package was created using the 'tufte' R package code as a starting point.
 }
 \seealso{
 Useful links:
