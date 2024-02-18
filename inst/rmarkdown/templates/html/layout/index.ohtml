@@ -47,7 +47,7 @@ $endif$
     .usethemebg{
       background-color: var(--primary-theme-col1);
     }
-    a:active,a{
+    section a:active, section a{
       color: var(--primary-theme-col1);
     }
     code{white-space: pre-wrap;}
@@ -236,6 +236,7 @@ $endif$
     		EnlighterJS.init('css', '',{language : 'css',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
     		EnlighterJS.init('yaml', '',{language : 'yaml',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
     </script>
-
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>
