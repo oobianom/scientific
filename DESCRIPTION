@@ -1,7 +1,7 @@
 Type: Package
 Package: scientific
 Title: Elegant Scientific Themed Reporting for 'Markdown'
-Version: 2024.0
+Version: 2024.1
 Authors@R: c(
     person("Obinna", "Obianom", email = "idonshayo@gmail.com", role = c("aut", "cre")))
 Maintainer: Obinna Obianom <idonshayo@gmail.com>
