@@ -3,6 +3,7 @@ title: "The New Scientific Report Rmarkdown Theme Example"
 highlighter: "godzilla"
 summaryslide: TRUE
 lightsummaryslide: FALSE
+removeheader: FALSE #optional
 themecolor: brown
 codelang: "r" #default is R, you may add js php python and so on
 runningheader: "Scientific Report Example" # only for pdf output
