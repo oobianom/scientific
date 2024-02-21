@@ -9,8 +9,18 @@
 #'   [html_document()] (note you cannot use the `template`
 #'   argument in `handout` or the `theme` argument in
 #'   `html()`; these arguments have been set internally)
+#' @return a PDF or HTML notebook output based on the R markdown document provided
 #' @export
-#' @examples library(scientific)
+#' @examples
+#' \dontrun{
+#' # for Rmd to PDF
+#' library(rmarkdown)
+#' library(scientific)
+#' rmdfile <- "input.Rmd"
+#' rmarkdown::render(rmdfile,
+#'   scientific::handout())
+#' }
+#'
 handout <- function(fig_width = 4, fig_height = 2.5, fig_crop = TRUE, dev = "pdf",
                           highlight = "default", ...) {
   pdf("handout", fig_width, fig_height, fig_crop, dev, highlight, ...)
@@ -25,7 +35,7 @@ book <- function(fig_width = 4, fig_height = 2.5, fig_crop = TRUE, dev = "pdf",
 
 pdf <- function(documentclass = c("handout", "book"), fig_width = 4, fig_height = 2.5,
                       fig_crop = TRUE, dev = "pdf", highlight = "default",
-                      template = temp_loc("handout", "handout.tex"), ...) {
+                      template = temp_loc("handout/resources/handout.tex"), ...) {
 
   # resolve default highlight
   if (identical(highlight, "default")) highlight <- "pygments"

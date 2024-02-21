@@ -1,73 +1,106 @@
-ABAP (abap)
-Apache HTTPD (apache)
-Assembly (assembly, asm)
-AVR Assembly (avrassembly, avrasm)
-Windows Batch/Bat (bat,batch,cmd)
-C/C++ (c,cpp, c++)
-C# (csharp)
-CSS (css)
-Cython (cython)
-CordPro (cordpro)
-diff (diff)
-Dockerfile (docker, dockerfile)
-Generic (generic, standard) - default highlighting scheme
-Groovy (groovy)
-Go (go, golang)
-HTML (html)
-Ini (ini, conf)
-Java (java)
-Javascript (js, javascript, jquery, mootools, ext.js)
-JSON (json)
-JSX (jsx)
-Kotlin (kotlin)
-LATEX (latex)
-LESS (less)
-lighttpd (lighttpd)
-LUA (lua)
-MariaDB (mariadb)
-Markdown (gfm, md, markdown)
-Matlab/Octave (octave, matlab)
-MSSQL (mssql)
-NGINX (nginx)
-NSIS (nsis)
-Oracle Database (oracledb)
-PHP (php)
-Powerhsell (powershell)
-Prolog (prolog)
-Python (py, python)
-PureBasic (purebasic, pb)
-QML (qml)
-R (r)
-RAW (raw) - raw code without highlighting with EnlighterJS container styles!
-RouterOS/SwitchOS (routeros)
-Ruby (ruby)
-Rust (rust)
-Scala (scala)
-SCSS (scss, sass)
-Shellscript (shell, bash)
-Generic SQL (sql)
-Squirrel (squirrel)
-Swift (swift)
-Typescript (typescript)
-VHDL (vhdl)
-VisualBasic (visualbasic, vb)
-Verilog (verilog)
-XML (xml, html)
-YAML (yaml)
+---
+title: "Scientific Markdown Template: Introduction and Usage for R and RMarkdown"
+author: "Obinna N. Obianom"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Scientific Markdown Template: Introduction and Usage for R and RMarkdown}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
 
+## Welcome to the scientific R package
 
+## Install
 
+From CRAN or github.com/oobianom/scientific
 
-hemes
-Enlighter (enlighter, standard) - Enlighter`s default Theme
-Classic (classic) - SyntaxHighlighter inspired
-Bootstrap (bootstrap4) - Bootstrap 4 inpired themes, high contrast
-Beyond (beyond) - BeyondTechnology Theme
-Godzilla (godzilla) - A MDN inspired Theme
-Eclipse (eclipse) - Eclipse inspired
-MooTwo (mootwo) - Inspired by the MooTools Website
-Droide (droide) - Modern, minimalistic
-Minimal (minimal) - Bright, High contrast
-Atomic (atomic) - Dark, Colorful
-Dracula (dracula) - Dark, using official draculatheme colorscheme
-Rowhammer (rowhammer) - Light, Transparent, divided rows
+## Usage 
+
+Very simply in Rmarkdown with various features, an example of text below
+
+```
+  
+  ---
+  title: "The New Scientific Report Rmarkdown Theme Example"
+  highlighter: "godzilla"
+  summaryslide: TRUE
+  lightsummaryslide: FALSE
+  themecolor: brown
+  codelang: "r" #default is R, you may add js php python and so on
+  runningheader: "Scientific Report Example" # only for pdf output
+  subtitle: "An implementation in R Markdown" # only for html output
+  author: "Obinna Obianom (https://github.com/oobianom/scientific)"
+  date: "`r Sys.Date()`"
+  output:
+    scientific::html: 
+      toc: TRUE
+      self_contained: TRUE
+  bibliography: skeleton.bib
+  link-citations: yes
+  summarypoints:
+      - Fusce id velit ut tortor pretium viverra. Lectus urna duis convallis convallis tellus id interdum. 
+      - Erat imperdiet sed euismod nisi porta lorem. Sed viverra tellus in hac habitasse platea dictumst. 
+      - Turpis egestas integer eget aliquet nibh praesent tristique. Ultricies integer quis auctor elit. 
+      - Dictum varius duis at consectetur lorem donec massa. Convallis aenean et tortor at risus viverra. 
+      - Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Aliquet bibendum enim facilisis gravida neque. 
+      - Porta lorem mollis aliquam ut porttitor leo a diam. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. 
+      - Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Risus feugiat in ante metus dictum. 
+  ---
+  
+  # Sample text and code
+  
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar   pellentesque habitant morbi tristique senectus et. Neque viverra justo nec ultrices. Non enim praesent elementum facilisis leo vel   fringilla. Orci eu lobortis elementum nibh tellus molestie. Blandit turpis cursus in hac. Commodo sed egestas egestas fringilla   phasellus faucibus. 
+  
+  ``r
+  library(scientific)
+  plot(1:100,sample(1:100))
+  boxplot(mtcars)
+  
+  ``
+  
+  Aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Donec enim diam vulputate ut pharetra sit amet aliquam. Semper   viverra nam libero justo laoreet sit. Fermentum dui faucibus in ornare quam. Sed viverra tellus in hac habitasse platea dictumst   vestibulum rhoncus. Ultricies mi eget mauris pharetra et. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget.   Imperdiet nulla malesuada pellentesque elit eget.
+  
+  # Tables
+  
+  You can use the `kable()` function from the **knitr** package to format tables that integrate well with the rest of the scientific   handout style. The table captions are placed in the margin like figures in the HTML output.
+  
+  ``r
+  knitr::kable(
+    mtcars[1:6, 1:6], caption = 'A subset of mtcars.'
+  )
+  ``
+  
+  # Block Quotes
+  
+  We know from the Markdown syntax that paragraphs that start with `>` are converted to block quotes. If you want to add a   right-aligned footer for the quote, you may use the function `quote_footer()` from **scientific** in an inline R expression. Here is   an example:
+  
+  > "If it weren't for my lawyer, I'd still be in prison. It went a lot faster with two people digging."
+  >
+  > `r scientific::quote_footer('--- Joe Martin')`
+  
+  Without using `quote_footer()`, it looks like this (the second line is just a normal paragraph):
+  
+  > "Great people talk about ideas, average people talk about things, and small people talk about wine."
+  >
+  > --- Fran Lebowitz
+  
+  ## Mathematical equations
+  
+  In fact, you can include anything in the margin using the **knitr** engine named `marginfigure`. Unlike R code chunks ```` ```{r}   ````, you write a chunk starting with ```` ```{marginfigure} ```` instead, then put the content in the chunk. See an example on the   right about the first fundamental theorem of calculus.
+  
+  ``{marginfigure}
+  We know from _the first fundamental theorem of calculus_ that for $x$ in $[a, b]$:
+  $$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x).$$
+  ``
+  
+  $$\frac{d}{dx}\left( \int_{a}^{x} f(vc)\,du\right)=f(x).$$
+  
+```
+  

@@ -1,33 +1,26 @@
-#' @details `html()` provides the HTML format based on the Tufte CSS:
-#'   <https://edwardtufte.github.io/tufte-css/>.
-#' @param tufte_features A character vector of style features to enable:
-#'   `fonts` stands for the `et-book` fonts in the `tufte-css`
-#'   project, `background` means the lightyellow background color of the
-#'   page, and `italics` means whether to use italics for the headers. You
-#'   can enable a subset of these features, or just disable all of them by
-#'   `NULL`. When this argument is not used and the `tufte_variant`
-#'   argument is not `default`, no features are enabled.
-#' @param tufte_variant A variant of the Tufte style. Currently supported styles
-#'   are `default` (from the `tufte-css` project), and
-#'   `envisioned` (inspired by the project `Envisioned CSS`
-#'   <https://github.com/nogginfuel/envisioned-css> but essentially just
-#'   sets the font family to `Roboto Condensed`, and changed the
-#'   background/foreground colors).
-#' @param margin_references Whether to place citations in margin notes.
+#' @details `html()` provides the HTML format based on the scientific CSS
 #' @rdname handout
+#' @examples
+#' \dontrun{
+#' # for Rmd to HTML
+#' library(rmarkdown)
+#' library(scientific)
+#' rmdfile <- "input.Rmd"
+#' rmarkdown::render(rmdfile,
+#'   scientific::html(
+#'     toc = TRUE,
+#'     toc_depth = 2))
+#' }
 #' @export
-html <- function(..., tufte_features = c("fonts", "background", "italics"),
-                       tufte_variant = c("default", "envisioned"), margin_references = TRUE) {
-  tufte_variant <- match.arg(tufte_variant)
-  if (missing(tufte_features) && tufte_variant != "default") {
-    tufte_features <- character()
-  }
+html <- function(... ) {
+  margin_references = TRUE
   html_document2 <- function(..., extra_dependencies = list()) {
     rmarkdown::html_document(
       ...,
-      template = system.file("rmarkdown", "templates", "html", "layout","index.ohtml", package = .packageName),
+      template = system.file("rmarkdown", "templates", "html",
+                             "layout","index.ohtml", package = .packageName),
       extra_dependencies = c(
-        extra_dependencies, fetchHtmlDep(tufte_features, tufte_variant)
+        extra_dependencies, fetchHtmlDep()
       )
     )
   }
@@ -66,8 +59,8 @@ html <- function(..., tufte_features = c("fonts", "background", "italics"),
         fn_label, i, if (pandoc2) "footnote-ref" else "footnoteRef", fn_label, i, i
       )
       con <- sprintf(paste0(
-        '<label for="tufte-sn-%d" class="margin-toggle sidenote-number">%d</label>',
-        '<input type="checkbox" id="tufte-sn-%d" class="margin-toggle">',
+        '<label for="scientific-sn-%d" class="margin-toggle sidenote-number">%d</label>',
+        '<input type="checkbox" id="scientific-sn-%d" class="margin-toggle">',
         '<span class="sidenote"><span class="sidenote-number">%d</span> %s</span>'
       ), i, i, i, i, notes[i])
       x <- gsub_fixed(num, con, x)
@@ -105,7 +98,7 @@ html <- function(..., tufte_features = c("fonts", "background", "italics"),
     }
 
     # add an incremental number to the id of <label> and <input> for margin notes
-    r <- '(<label|<input type="checkbox") (id|for)(="tufte-mn)-(" )'
+    r <- '(<label|<input type="checkbox") (id|for)(="scientific-mn)-(" )'
     m <- gregexpr(r, x)
     j <- 1
     regmatches(x, m) <- lapply(regmatches(x, m), function(z) {
@@ -171,7 +164,7 @@ html <- function(..., tufte_features = c("fonts", "background", "italics"),
 }
 
 #' @importFrom htmltools htmlDependency
-fetchHtmlDep <- function(features, variant) {
+fetchHtmlDep <- function() {
   list(htmltools::htmlDependency(
     "scientific-r", "2024.0",
     src = temp_loc(), stylesheet = list.files(path = temp_loc(), pattern = ".css$"),
@@ -179,8 +172,7 @@ fetchHtmlDep <- function(features, variant) {
   ))
 }
 
-# we assume one footnote only contains one paragraph here, although it is
-# possible to write multiple paragraphs in a footnote with Pandoc's Markdown
+
 parse_footnotes <- function(x, fn_label = "fn") {
   i <- grep('^<div class="footnotes[^"]*"[^>]*>', x)
   if (length(i) == 0) {
@@ -217,13 +209,7 @@ margin_references <- function(x) {
   if (n == 0) {
     return(x)
   }
-  # pandoc-citeproc may generate a link on both the year and the alphabetic
-  # suffix, e.g. <a href="#cite-key">2016</a><a href="#cite-key">a</a>;
-  # Pandoc 2.11+ may also generate several links with parenthesis between links,
-  # but this is different, e.g
-  # <a href="#ref-R-rmarkdown" role="doc-biblioref">Allaire et al.</a> (<a href="#ref-R-rmarkdown" role="doc-biblioref">2020</a>)</span>
-  # we need to merge the two links
-  r2 <- '(<a href="#ref-[^"]+"[^>]*>)([^<]+)</a>([^<]*)\\1([^<]+)</a>([^<]*)'
+    r2 <- '(<a href="#ref-[^"]+"[^>]*>)([^<]+)</a>([^<]*)\\1([^<]+)</a>([^<]*)'
   x <- gsub(r2, "\\1\\2\\3\\4\\5</a>", x)
   ids <- gsub(r, "\\1", x[k])
   ids <- sprintf('<a href="#%s"[^>]*>([^<]+)</a>', ids)
@@ -242,7 +228,7 @@ margin_references <- function(x) {
 
 marginnote_html <- function(text = "", icon = "&#8853;") {
   sprintf(paste0(
-    '<label for="tufte-mn-" class="margin-toggle">%s</label>',
-    '<input type="checkbox" id="tufte-mn-" class="margin-toggle">%s'
+    '<label for="scientific-mn-" class="margin-toggle">%s</label>',
+    '<input type="checkbox" id="scientific-mn-" class="margin-toggle">%s'
   ), icon, text)
 }

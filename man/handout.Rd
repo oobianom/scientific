@@ -28,12 +28,7 @@ book(
   ...
 )
 
-html(
-  ...,
-  tufte_features = c("fonts", "background", "italics"),
-  tufte_variant = c("default", "envisioned"),
-  margin_references = TRUE
-)
+html(...)
 
 newthought(text)
 
@@ -73,28 +68,14 @@ if these two tools are available.}
 argument in \code{handout} or the \code{theme} argument in
 \code{html()}; these arguments have been set internally)}
 
-\item{tufte_features}{A character vector of style features to enable:
-\code{fonts} stands for the \code{et-book} fonts in the \code{tufte-css}
-project, \code{background} means the lightyellow background color of the
-page, and \code{italics} means whether to use italics for the headers. You
-can enable a subset of these features, or just disable all of them by
-\code{NULL}. When this argument is not used and the \code{tufte_variant}
-argument is not \code{default}, no features are enabled.}
-
-\item{tufte_variant}{A variant of the Tufte style. Currently supported styles
-are \code{default} (from the \code{tufte-css} project), and
-\code{envisioned} (inspired by the project \verb{Envisioned CSS}
-\url{https://github.com/nogginfuel/envisioned-css} but essentially just
-sets the font family to \verb{Roboto Condensed}, and changed the
-background/foreground colors).}
-
-\item{margin_references}{Whether to place citations in margin notes.}
-
 \item{text}{A character string to be presented as a \dQuote{new thought}
 (using small caps), or a margin note, or a footer of a quote}
 
 \item{icon}{A character string to indicate there is a hidden margin note when
 the page width is too narrow (by default it is a circled plus sign)}
+}
+\value{
+a PDF or HTML notebook output based on the R markdown document provided
 }
 \description{
 Template for creating scientific handout
@@ -102,8 +83,7 @@ Template for creating scientific handout
 \details{
 \code{handout()} provides the PDF format
 
-\code{html()} provides the HTML format based on the Tufte CSS:
-\url{https://edwardtufte.github.io/tufte-css/}.
+\code{html()} provides the HTML format based on the scientific CSS
 
 \code{newthought()} can be used in inline R expressions in R
 Markdown
@@ -125,6 +105,24 @@ after \samp{\\hfill} for LaTeX output (to right-align text).
 \code{sans_serif()} applies sans-serif fonts to \code{text}.
 }
 \examples{
+\dontrun{
+# for Rmd to PDF
+library(rmarkdown)
 library(scientific)
+rmdfile <- "input.Rmd"
+rmarkdown::render(rmdfile,
+  scientific::handout())
+}
+
+\dontrun{
+# for Rmd to HTML
+library(rmarkdown)
+library(scientific)
+rmdfile <- "input.Rmd"
+rmarkdown::render(rmdfile,
+  scientific::html(
+    toc = TRUE,
+    toc_depth = 2))
+}
 newthought("In this section")
 }
