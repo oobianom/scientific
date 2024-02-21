@@ -111,11 +111,12 @@ $if(summaryslide)$
 </div>
 
 $else$
-
+$if(removeheader)$
+$else$
 <div class="u-header u-clearfix u-grey-80 u-sticky">
       <div style="padding:2px 10px;">$if(title)$$title$$endif$</div>
 </div>
-
+$endif$
 $endif$
 
 
