@@ -174,7 +174,46 @@ $endif$
 
 
 
+<style>
 
+
+.ytoc ul > ul {
+  display: none;
+  list-style-type:none;
+}
+
+.ytoc ul > ul > li {
+    list-style:none;
+}
+
+.ytoc ul > li > ul {
+   color:blue;
+   display:none
+}
+.ytoc ul > li {
+   color:grey;
+   list-style-type:circle;
+}
+
+.ytoc ul > li:has(ul) {
+   color:red;
+   list-style-type:square;
+}
+
+.ytoc li:has(ul) > a{
+color:green;
+}
+</style>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+$(".ytoc li:has(ul)").children("a").click(function(){
+$(this).parent().children('ul').toggle();
+});
+
+})
+</script>
 
 $for(include-after)$
 $include-after$
