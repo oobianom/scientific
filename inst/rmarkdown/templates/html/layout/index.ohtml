@@ -206,16 +206,26 @@ color:green;
 
 
 <script type="text/javascript">
+var hashloc = window.location.hash;
+var currid = hashloc.replace("#","");
 $$(document).ready(function() {
+
 $$(".ytoc li:has(ul)").children("a").click(function(){
 $$(this).parent().children('ul').toggle();
 });
-$$(".ytoc li a[href='"+hashloc+"'").click();
 
-
-$$("div:hover").each(function() {
-  console.log($$(this).attr("id") + " has focus!");
+if(hashloc != ""){
+$$(".ytoc li a[href='"+hashloc+"']").click();
+$$("div").hover(function() {
+let idattr = $$(this).attr("id");
+if(typeof idattr !== typeof undefined && idattr !== false){
+$$(".ytoc li a[href='"+hashloc+"']").next("ul").hide();
+//$$(".ytoc li a[href='#"+currid+"']").next("ul").hide();
+//currid = idattr;
+$$(".ytoc li a[href='#"+idattr+"']").next("ul").show();
+}
 });
+}
 
 })
 </script>
