@@ -213,8 +213,8 @@ $$(this).parent().children('ul').toggle();
 $(".ytoc li a[href='"+hashloc+"'").click();
 
 
-$("div:hover").each(function() {
-  console.log($(this).attr("id") + " has focus!");
+$$("div:hover").each(function() {
+  console.log($$(this).attr("id") + " has focus!");
 });
 
 })
