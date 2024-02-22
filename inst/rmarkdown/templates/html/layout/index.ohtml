@@ -191,12 +191,12 @@ $endif$
    display:none
 }
 .ytoc ul > li {
-   color:grey;
+   color: #666666;
    list-style-type:square;
 }
 
 .ytoc ul > li:has(ul) {
-   color:red;
+   color:$if(themecolor)$$themecolor$$else$red$endif$;;
 }
 
 .ytoc li:has(ul) > a{
