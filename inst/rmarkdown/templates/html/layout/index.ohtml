@@ -207,9 +207,9 @@ color:green;
 
 
 <script type="text/javascript">
-$(document).ready(function() {
-$(".ytoc li:has(ul)").children("a").click(function(){
-$(this).parent().children('ul').toggle();
+$$(document).ready(function() {
+$$(".ytoc li:has(ul)").children("a").click(function(){
+$$(this).parent().children('ul').toggle();
 });
 
 })
