@@ -202,7 +202,7 @@ $endif$
 }
 
 .ytoc li:has(ul) > a{
-color:green;
+font-weight:600;
 }
 .hoveredd{
 background-color:black!important;
