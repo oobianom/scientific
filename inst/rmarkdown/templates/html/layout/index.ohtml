@@ -216,6 +216,7 @@ $$(this).parent().children('ul').toggle();
 
 if(hashloc != ""){
 $$(".ytoc li a[href='"+hashloc+"']").click();
+}
 $$("div").hover(function() {
 let idattr = $$(this).attr("id");
 if(typeof idattr !== typeof undefined && idattr !== false){
@@ -225,7 +226,7 @@ $$(".ytoc li a[href='"+hashloc+"']").next("ul").hide();
 $$(".ytoc li a[href='#"+idattr+"']").next("ul").show();
 }
 });
-}
+
 
 })
 </script>
