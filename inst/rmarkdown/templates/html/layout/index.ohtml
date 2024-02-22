@@ -192,12 +192,11 @@ $endif$
 }
 .ytoc ul > li {
    color:grey;
-   list-style-type:circle;
+   list-style-type:square;
 }
 
 .ytoc ul > li:has(ul) {
    color:red;
-   list-style-type:square;
 }
 
 .ytoc li:has(ul) > a{
