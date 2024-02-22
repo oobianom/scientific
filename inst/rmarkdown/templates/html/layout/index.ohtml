@@ -175,7 +175,9 @@ $endif$
 
 
 <style>
-
+.ytoc a {
+  display: block;
+}
 
 .ytoc ul > ul {
   display: none;
@@ -202,6 +204,10 @@ $endif$
 .ytoc li:has(ul) > a{
 color:green;
 }
+.hoveredd{
+background-color:black!important;
+color: white!important;
+}
 </style>
 
 
@@ -223,6 +229,8 @@ if(typeof idattr !== typeof undefined && idattr !== false){
 $$(".ytoc li a[href='"+hashloc+"']").next("ul").hide();
 //$$(".ytoc li a[href='#"+currid+"']").next("ul").hide();
 //currid = idattr;
+$$(".hoveredd").toggleClass('hoveredd')
+$$(".ytoc li a[href='#"+idattr+"']").toggleClass('hoveredd')
 $$(".ytoc li a[href='#"+idattr+"']").next("ul").show();
 }
 });
