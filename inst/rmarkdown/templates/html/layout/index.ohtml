@@ -216,6 +216,9 @@ var hashloc = window.location.hash;
 var currid = hashloc.replace("#","");
 $$(document).ready(function() {
 $$(".hoveredd").toggleClass('hoveredd')
+$$("body").click(function(){
+$$(".hoveredd").toggleClass('hoveredd')
+})
 $$(".ytoc li:has(ul)").children("a").click(function(){
 $$(this).parent().children('ul').toggle();
 });
