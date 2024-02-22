@@ -210,7 +210,7 @@ $$(document).ready(function() {
 $$(".ytoc li:has(ul)").children("a").click(function(){
 $$(this).parent().children('ul').toggle();
 });
-$(".ytoc li a[href='"+hashloc+"'").click();
+$$(".ytoc li a[href='"+hashloc+"'").click();
 
 
 $$("div:hover").each(function() {
