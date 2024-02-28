@@ -131,7 +131,7 @@ $endif$
           <div class="u-container-layout u-valign-top u-container-layout-1">
 
             <div class="u-sticky u-header u-text-dark ytoc">
-            <div style="padding:10px"></div>
+            <div class="table-content-header-title" style="padding:10px; padding-top:20px;"><b>TABLE OF CONTENTS</b></div>
             $toc$ </div>
           </div>
         </div>
@@ -193,7 +193,7 @@ $endif$
    display:none
 }
 .ytoc ul > li {
-   color: #666666;
+   color: #999999;
    list-style-type:square;
 }
 
