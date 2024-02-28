@@ -160,7 +160,11 @@ $endif$
 
         $if(toc)$$else$
         <div class="u-container-style u-layout-cell u-palette-1-base u-size-10 u-layout-cell-1" style="border-right-width:0px; border-left:2px solid #333333">
-          <div class="u-container-layout u-valign-top u-container-layout-1"></div>
+          <div class="u-container-layout u-valign-top u-container-layout-1">
+		<div class="u-sticky u-header u-text-dark ytoc">
+            <div class="table-content-header-title" style="padding-top:20px;"><b>TABLE OF CONTENTS</b></div>
+            $toc$ </div>
+	    </div>
         </div>
         $endif$
 
