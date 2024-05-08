@@ -113,7 +113,7 @@ $if(summaryslide)$
 $else$
 $if(removeheader)$
 $else$
-<div class="u-header u-clearfix u-grey-80 u-sticky">
+<div class="u-header u-clearfix u-sticky" style="background-color:$if(themecolor)$$themecolor$$else$#333333$endif$">
       <div style="padding:2px 10px;">$if(title)$$title$$endif$</div>
 </div>
 $endif$
@@ -300,12 +300,8 @@ $endif$
 
         });
 
-        EnlighterJS.init('php', '',{language : 'php',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
-    		EnlighterJS.init('js', '',{language : 'js',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
-    		EnlighterJS.init('python', '',{language : 'python',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
-    		EnlighterJS.init('json', '',{language : 'json',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
-    		EnlighterJS.init('css', '',{language : 'css',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
-    		EnlighterJS.init('yaml', '',{language : 'yaml',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
+        EnlighterJS.init('$codelang$', '',{language : '$codelang$',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
+
     </script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
