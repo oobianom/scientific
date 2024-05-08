@@ -41,6 +41,7 @@ $endif$
     }
     :root{
      --primary-theme-col1: $if(themecolor)$$themecolor$$else$#333333$endif$;
+     --white: #ffffff;
     }
     .usethemebg{
       background-color: var(--primary-theme-col1);
@@ -112,7 +113,7 @@ $else$
 $if(removeheader)$
 $else$
 <div class="u-header u-clearfix u-sticky" style="background-color:$if(themecolor)$$themecolor$$else$#333333$endif$">
-      <div style="padding:2px 10px;">$if(title)$$title$$endif$</div>
+      <div class="u-text-white" style="padding:2px 10px;">$if(title)$$title$$endif$</div>
 </div>
 $endif$
 $endif$
@@ -210,6 +211,8 @@ $endif$
 background-color:#999999!important;
 color: white!important;
 }
+
+
 </style>
 
 
