@@ -196,8 +196,9 @@ $endif$
    display:none
 }
 .ytoc ul > li {
-   color: #999999;
-   list-style-type:square;
+   color: #777777;
+   list-style-type:none;
+   padding-left: 10px;
 }
 
 .ytoc ul > li:has(ul) {
@@ -208,34 +209,33 @@ $endif$
 /*font-weight:600;*/
 }
 li:has(.hoveredd){
-background-color:#999999!important;
-::marker {
-		content: " ";
-	}
+/*background-color:#48b2!important;*/
 }
 .hoveredd{
-color: white!important;
+color: $if(themecolor)$$themecolor$$else$white$endif$!important;
+border-right: 5px solid;
 }
 
-ul {
-	padding-inline-start: 0.2em;
-	font-weight: 400;
+.ytoc ul {
+margin-top: 5px;
+	padding-inline-start: 1em;
+	font-weight: 200;
 
 	::marker {
-		content: ">";
+		content: "▶";
 	}
 
 	ul ::marker {
-		content: ">>";
+		content: "▼";
 	}
 }
 
-li {
+.ytoc li {
 	position: relative;
 	padding-inline-start: 0.2em;
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
-	border-bottom: 1px solid #48b2;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	/*border-bottom: 1px solid #48b2;*/
 	cursor: default;
 	transition: color 0.4s;
 
