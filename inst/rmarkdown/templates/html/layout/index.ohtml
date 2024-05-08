@@ -201,17 +201,56 @@ $endif$
 }
 
 .ytoc ul > li:has(ul) {
-   color:$if(themecolor)$$themecolor$$else$red$endif$;;
+   color:$if(themecolor)$$themecolor$$else$red$endif$;
 }
 
 .ytoc li:has(ul) > a{
 /*font-weight:600;*/
 }
-.hoveredd{
+li:has(.hoveredd){
 background-color:#999999!important;
+::marker {
+		content: " ";
+	}
+}
+.hoveredd{
 color: white!important;
 }
 
+ul {
+	padding-inline-start: 0.2em;
+	font-weight: 400;
+
+	::marker {
+		content: ">";
+	}
+
+	ul ::marker {
+		content: ">>";
+	}
+}
+
+li {
+	position: relative;
+	padding-inline-start: 0.2em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	border-bottom: 1px solid #48b2;
+	cursor: default;
+	transition: color 0.4s;
+
+	&:hover {
+		color: #48b;
+
+		&::marker {
+			font-weight: 700;
+		}
+		&::after {
+			opacity: 1;
+			transition-delay: 0.2s;
+		}
+	}
+}
 
 </style>
 
