@@ -2727,11 +2727,11 @@ base {
   display: none;
 }
 a {
-  color: #259bca;
+  color: #f1f1f1;
   text-decoration: none;
 }
 a:hover {
-  color: #0676a4;
+  color: #e1e1e1;
 }
 a:focus {
   outline: thin dotted;
