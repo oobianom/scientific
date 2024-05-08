@@ -4,7 +4,7 @@ highlighter: "godzilla"
 summaryslide: TRUE
 lightsummaryslide: FALSE
 removeheader: FALSE #optional
-themecolor: black #you may use any color or hex
+themecolor: purple #you may use any color or hex
 codelang: "r" #default is R, you may add js php python and so on
 runningheader: "Scientific Report Example" # only for pdf output
 subtitle: "An implementation in R Markdown" # only for html output
