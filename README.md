@@ -1,8 +1,8 @@
 # Towards Streamlined Scientific Reporting: Rmarkdown and Shiny Templates for Scientists
 
-#### Still experimental and in development...
+#### Highly customizable rmarkdown theme
 
-#### Built to maximize efficiency, space and style
+#### Built to maximize efficiency, whitespace and style
 
 ```r
 # install

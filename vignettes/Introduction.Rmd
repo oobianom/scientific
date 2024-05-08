@@ -1,10 +1,10 @@
 ---
-title: "Scientific Markdown Template: Introduction and Usage for R and RMarkdown"
+title: "Highly Customizable Scientific Markdown Template: Introduction and Usage for R and RMarkdown"
 author: "Obinna N. Obianom"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Scientific Markdown Template: Introduction and Usage for R and RMarkdown}
+  %\VignetteIndexEntry{Highly Customizable Scientific Markdown Template: Introduction and Usage for R and RMarkdown}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
