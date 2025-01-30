@@ -1,7 +1,7 @@
 Type: Package
 Package: scientific
-Title: Highly Customizable 'rmarkdown' Theme for Scientific Reporting
-Version: 2024.2
+Title: Highly Customizable 'rmarkdown' and 'shiny' Themes for Scientific Reporting
+Version: 2025.0
 Authors@R: c(
     person("Obinna", "Obianom", email = "idonshayo@gmail.com", role = c("aut", "cre")))
 Maintainer: Obinna Obianom <idonshayo@gmail.com>
@@ -13,7 +13,9 @@ Imports:
     htmltools,
     knitr,
     rmarkdown,
-    xfun
+    xfun,
+    shiny,
+    nextGenShinyApps
 Suggests: 
     testthat
 Encoding: UTF-8
