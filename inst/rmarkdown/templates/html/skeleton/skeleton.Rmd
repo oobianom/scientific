@@ -14,7 +14,7 @@ output:
   scientific::html: 
     toc: TRUE
     self_contained: TRUE
-link-citations: no
+    template: template1
 summarypoints:
     - Fusce id velit ut tortor pretium viverra. Lectus urna duis convallis convallis tellus id interdum. 
     - Erat imperdiet sed euismod nisi porta lorem. Sed viverra tellus in hac habitasse platea dictumst. 
