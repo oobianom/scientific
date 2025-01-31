@@ -28,7 +28,7 @@ book(
   ...
 )
 
-html(..., .template = c("template1", "template2"))
+html(..., template = "template1")
 
 newthought(text)
 
@@ -68,7 +68,7 @@ if these two tools are available.}
 argument in \code{handout} or the \code{theme} argument in
 \code{html()}; these arguments have been set internally)}
 
-\item{.template}{template name to use}
+\item{template}{template name to use}
 
 \item{text}{A character string to be presented as a \dQuote{new thought}
 (using small caps), or a margin note, or a footer of a quote}
