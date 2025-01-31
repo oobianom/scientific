@@ -106,6 +106,9 @@ after \samp{\\hfill} for LaTeX output (to right-align text).
 
 \code{sans_serif()} applies sans-serif fonts to \code{text}.
 }
+\note{
+Template options include "template1" and "template2"
+}
 \examples{
 \dontrun{
 # for Rmd to PDF
