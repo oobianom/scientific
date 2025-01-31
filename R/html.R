@@ -1,4 +1,5 @@
 #' @details `html()` provides the HTML format based on the scientific CSS
+#' @param template template name to use
 #' @rdname handout
 #' @examples
 #' \dontrun{
@@ -12,13 +13,13 @@
 #'     toc_depth = 2))
 #' }
 #' @export
-html <- function(... ) {
+html <- function(...,template = "template1") {
   margin_references = TRUE
   html_document2 <- function(..., extra_dependencies = list()) {
     rmarkdown::html_document(
       ...,
       template = system.file("rmarkdown", "templates", "html",
-                             "layout","index.ohtml", package = .packageName),
+                             "layout",paste0(template,".tpl"), package = .packageName),
       extra_dependencies = c(
         extra_dependencies, fetchHtmlDep()
       )
