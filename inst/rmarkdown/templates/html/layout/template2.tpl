@@ -17,7 +17,7 @@ $if(font-size-adjustment)$
   <meta name="font-size-adjustment" content="$font-size-adjustment$"/>
 $endif$
     <style>
-:root{--sidebarmaincol:$if(themecolor)$$themecolor$$else$#dc3545$endif$;--sidebarmaincolfade:#dc354522;--hoversidefade1:rgba(0,0,0,0.1);--sidebarprimcol:#ffffff}.sidebar{background-color:var(--sidebarmaincol);min-height:100vh;color:var(--sidebarprimcol)}.nav-link.active,.navsideleft li a:active,.progress-badge,.sub-menu{background-color:var(--hoversidefade1)}.nav-link,.navsideleft li a{color:#333;padding:.75rem 1rem;cursor:pointer}.nav-link:hover,.navsideleft li a:hover{background-color:var(--hoversidefade1);color:#000}.align-left-icon,.check-icon{width:20px;height:20px;margin-right:8px}.dropdown-toggle::after{float:right;margin-top:8px}.sub-menu{padding-left:2rem}.sub-menu .nav-link{font-size:.9rem;padding:.5rem 1rem}.chevron-icon{width:16px;height:16px;margin-right:8px;transition:transform .3s}.collapsed .chevron-icon{transform:rotate(-45deg)}.navsideleft{background-color:#fff}.navsideleft .nav{background-color:var(--sidebarmaincolfade)}pre{overflow:hidden}.enlighter-tooltip {display:none}.sticky-column { position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+:root{--sidebarmaincol:$if(themecolor)$$themecolor$$else$#dc3545$endif$;--sidebarmaincolfade:#dc354522;--hoversidefade1:rgba(0,0,0,0.1);--sidebarprimcol:#ffffff}.mainbody a{ color: #333333 !important; text-decoration: underline; }.sidebar{background-color:var(--sidebarmaincol);min-height:100vh;color:var(--sidebarprimcol)}.nav-link.active,.navsideleft li a:active,.progress-badge,.sub-menu{background-color:var(--hoversidefade1)}.nav-link,.navsideleft li a{color:#333;padding:.75rem 1rem;cursor:pointer}.nav-link:hover,.navsideleft li a:hover{background-color:var(--hoversidefade1);color:#000}.align-left-icon,.check-icon{width:20px;height:20px;margin-right:8px}.dropdown-toggle::after{float:right;margin-top:8px}.sub-menu{padding-left:2rem}.sub-menu .nav-link{font-size:.9rem;padding:.5rem 1rem}.chevron-icon{width:16px;height:16px;margin-right:8px;transition:transform .3s}.collapsed .chevron-icon{transform:rotate(-45deg)}.navsideleft{background-color:#fff}.navsideleft .nav{background-color:var(--sidebarmaincolfade)}pre{overflow:hidden}.enlighter-tooltip {display:none}.sticky-column { position: sticky; top: 0; height: 100vh; overflow-y: auto;}code, kbd, pre, samp {  font-size: unset!important; }
     </style>
 </head>
 <body>
@@ -116,45 +116,6 @@ $endif$
                             <a class="nav-link">Submit Request</a>
                             <a class="nav-link">View Status</a>
                         </div>
-
-                        <!-- Time Statement -->
-                        <a class="nav-link d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#time-collapse">
-                            <span>Time Statement</span>
-                            <svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/>
-                            </svg>
-                        </a>
-                        <div class="collapse sub-menu" id="time-collapse">
-                            <a class="nav-link">View Statement</a>
-                            <a class="nav-link">Download PDF</a>
-                            <a class="nav-link">Print Statement</a>
-                        </div>
-
-                        <!-- Understanding -->
-                        <a class="nav-link d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#understanding-collapse">
-                            <span>Check Understanding</span>
-                            <svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/>
-                            </svg>
-                        </a>
-                        <div class="collapse sub-menu" id="understanding-collapse">
-                            <a class="nav-link">Quiz</a>
-                            <a class="nav-link">Practice Exercise</a>
-                            <a class="nav-link">Review Material</a>
-                        </div>
-
-                        <!-- Summary -->
-                        <a class="nav-link d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#summary-collapse">
-                            <span>Summary</span>
-                            <svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/>
-                            </svg>
-                        </a>
-                        <div class="collapse sub-menu" id="summary-collapse">
-                            <a class="nav-link">Key Points</a>
-                            <a class="nav-link">Resources</a>
-                            <a class="nav-link">Next Steps</a>
-                        </div>
                     </div>
 
                     $toc$
@@ -166,7 +127,7 @@ $endif$
 			$endif$
 
             <!-- Main Content -->
-            <div class="col-12 col-md-9 col-lg-10 py-4 px-5 shadow">
+            <div class="col-12 col-md-9 col-lg-10 py-4 px-5 shadow mainbody">
             $if(title)$ <div class="slide titlepage">
 
               <h1 class="">$title$</h1>
