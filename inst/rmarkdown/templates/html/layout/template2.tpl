@@ -3,89 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <title>GlobalView Time & Attendance for Employees – USPR</title>
-    <style>
+    <link href="https://scientific.obi.obianom.com/assets/bootstrap.min.css" rel="stylesheet">
+    <script src="https://scientific.obi.obianom.com/assets/bootstrap.bundle.min.js"></script>
+    <title>$if(title)$$title$$else$Welcome to my Rmarkdown by scientific R package$endif$</title>
+    $for(header-includes)$
+  $header-includes$
+$endfor$
+<meta name="keywords" content="R personal profiles, $keywords$" />
+$if(footer)$
+  <meta name="copyright" content="$footer$"/>
+$endif$
+$if(font-size-adjustment)$
+  <meta name="font-size-adjustment" content="$font-size-adjustment$"/>
+$endif$
 
-	:root {
-  --sidebarmaincol: #dc3545;
-  --sidebarmaincolfade: #dc354522;
-  --hoversidefade1: rgba(0,0,0,0.1);
-  --sidebarprimcol: #ffffff;
-}
-        .sidebar {
-            background-color: var(--sidebarmaincol);
-            min-height: 100vh;
-            color: var(--sidebarprimcol);
-        }
-        .progress-badge {
-            background-color: var(--hoversidefade1);
-        }
-        .nav-link {
-            color: #333333;
-            padding: 0.75rem 1rem;
-            cursor: pointer;
-        }
-        .nav-link:hover {
-            background-color: var(--hoversidefade1);
-            color: #000000;
-        }
-        .nav-link.active {
-            background-color: var(--hoversidefade1);
-        }
-        .check-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
-        .dropdown-toggle::after {
-            float: right;
-            margin-top: 8px;
-        }
-        .sub-menu {
-            background-color: var(--hoversidefade1);
-            padding-left: 2rem;
-        }
-        .sub-menu .nav-link {
-            font-size: 0.9rem;
-            padding: 0.5rem 1rem;
-        }
-        .chevron-icon {
-            width: 16px;
-            height: 16px;
-            margin-right: 8px;
-            transition: transform 0.3s;
-        }
-        .collapsed .chevron-icon {
-            transform: rotate(-45deg);
-        }
-		.navsideleft{
-		background-color: #ffffff;
-		}
-		.navsideleft .nav{
-		background-color: var(--sidebarmaincolfade);
-		}
-		.align-left-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
-    </style>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
+            <!-- Sidebar for TOC-->
+            $if(toc)$
             <div class="col-md-3 col-lg-2 px-0 sidebar">
                 <div class="p-3">
-                    <h5 class="fw-bold mb-4">GlobalView Time & Attendance for Employees – USPR</h5>
+                    <h5 class="fw-bold mb-0">$if(title)$$title$$endif$</h5>
 
                 </div>
 
                 <nav class="mt-4 navsideleft">
                     <div class="nav flex-column">
-                        <!-- Introduction -->
                         <a class="nav-link d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#intro-collapse">
                             <span class="d-flex align-items-center">
                                 <svg class="align-left-icon" fill="currentColor" viewBox="0 0 16 16">
@@ -209,29 +154,126 @@
                             <a class="nav-link">Next Steps</a>
                         </div>
                     </div>
+
+                    $toc$
                 </nav>
             <div class="progress-badge p-2">
-                       Last Updated: 3/2/2024
+                       Last Updated: $if(date)$$date$$endif$
                     </div>
 			</div>
+			$endif$
 
             <!-- Main Content -->
-            <div class="col-md-9 col-lg-10 p-4 shadow">
-                <div class="text-secondary small mb-3">Lesson 5 of 8</div>
+            <div class="col-12 col-md-9 col-lg-10 py-4 px-5 shadow">
+            $if(title)$ <div class="slide titlepage">
 
-                <h1 class="display-6 fw-bold mb-4">Viewing and Submitting Absence/Attendance Requests via the ADP Mobile Solutions App</h1>
+              <h1 class="">$title$</h1>
+              $if(subtitle)$ <h3 class="subtitle">$subtitle$</h3> $endif$
 
-                <div class="mb-4">
-                    <img src="/api/placeholder/1200/600" alt="Person using mobile phone" class="img-fluid rounded shadow-sm"/>
-                </div>
-
-                <h2 class="text-danger fw-bold h4 mb-3">Viewing and Submitting Absence/Attendance Requests</h2>
-
-                <p class="text-secondary">
-                    In the previous lesson, you learned how to view and submit your absence/attendance requests via the ADP Global myView Web Portal.
-                </p>
+              <p class="author">
+              $for(author)$$author$$sep$ <br />$endfor$
+              </p>
+              $if(date)$ <p class="date">$date$</p> $endif$
+            </div> $endif$
+                $body$
             </div>
         </div>
     </div>
+
+    <style>
+:root{--sidebarmaincol:$if(themecolor)$$themecolor$$else$#dc3545$endif$;--sidebarmaincolfade:#dc354522;--hoversidefade1:rgba(0,0,0,0.1);--sidebarprimcol:#ffffff}.sidebar{background-color:var(--sidebarmaincol);min-height:100vh;color:var(--sidebarprimcol)}.nav-link.active,.navsideleft li a:active,.progress-badge,.sub-menu{background-color:var(--hoversidefade1)}.nav-link,.navsideleft li a{color:#333;padding:.75rem 1rem;cursor:pointer}.nav-link:hover,.navsideleft li a:hover{background-color:var(--hoversidefade1);color:#000}.align-left-icon,.check-icon{width:20px;height:20px;margin-right:8px}.dropdown-toggle::after{float:right;margin-top:8px}.sub-menu{padding-left:2rem}.sub-menu .nav-link{font-size:.9rem;padding:.5rem 1rem}.chevron-icon{width:16px;height:16px;margin-right:8px;transition:transform .3s}.collapsed .chevron-icon{transform:rotate(-45deg)}.navsideleft{background-color:#fff}.navsideleft .nav{background-color:var(--sidebarmaincolfade)}pre{overflow:hidden}.enlighter-tooltip {display:none}
+    </style>
+
+<script type="text/javascript">
+var hashloc = window.location.hash;
+var currid = hashloc.replace("#","");
+$$(document).ready(function() {
+$$(".hoveredd").toggleClass('hoveredd')
+$$("body").click(function(){
+$$(".hoveredd").toggleClass('hoveredd')
+})
+$$(".ytoc li:has(ul)").children("a").click(function(){
+$$(this).parent().children('ul').toggle();
+});
+
+if(hashloc != ""){
+$$(".ytoc li a[href='"+hashloc+"']").click();
+}
+$$("div").hover(function() {
+let idattr = $$(this).attr("id");
+if(typeof idattr !== typeof undefined && idattr !== false){
+$$(".ytoc li a[href='"+hashloc+"']").next("ul").hide();
+//$$(".ytoc li a[href='#"+currid+"']").next("ul").hide();
+//currid = idattr;
+$$(".hoveredd").toggleClass('hoveredd')
+$$(".ytoc li a[href='#"+idattr+"']").toggleClass('hoveredd')
+$$(".ytoc li a[href='#"+idattr+"']").next("ul").show();
+}
+});
+
+
+})
+</script>
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+$if(mathjax-url)$
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "$mathjax-url$";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+$endif$
+
+
+    <script type="text/javascript">
+        EnlighterJS.init('pre code', '',{
+                language : $if(codelang)$'$codelang$'$else$'R'$endif$,
+                theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$,
+                indent : 2,
+                // &amp; to &
+                ampersandCleanup: true,
+                // enable line hover highlighting
+                linehover: true,
+                // show linenumbers
+                linenumbers: $if(linenum)$$linenum$$else$true$endif$,
+                // copy css classes from origin element to outer wrapper
+                retainCssClasses: false,
+                // additional css classes added to outer wrapper
+                cssClasses: '',
+                // top outer toolbar
+                toolbarOuter: '{BTN_TABS}',
+                // header toolbar
+                toolbarTop: '{BTN_RAW}{BTN_COPY}{BTN_WINDOW}',
+                // footer toolbar
+                toolbarBottom: '',
+                // no line offset
+                lineoffset: 0,
+                // no special line highlighting
+                highlight: '',
+                // default layout
+                layout: 'standard',
+                // or 'scroll
+                textOverflow: 'break',
+                // enable collapse / vertical scroll
+                collapse: false,
+                // default title
+                title: ''
+
+
+        });
+
+        EnlighterJS.init('$codelang$', '',{language : '$codelang$',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
+
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 </html>
