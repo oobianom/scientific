@@ -28,7 +28,7 @@ book(
   ...
 )
 
-html(...)
+html(..., .template = c("template1", "template2"))
 
 newthought(text)
 
@@ -67,6 +67,8 @@ if these two tools are available.}
 \code{\link[=html_document]{html_document()}} (note you cannot use the \code{template}
 argument in \code{handout} or the \code{theme} argument in
 \code{html()}; these arguments have been set internally)}
+
+\item{.template}{template name to use}
 
 \item{text}{A character string to be presented as a \dQuote{new thought}
 (using small caps), or a margin note, or a footer of a quote}
