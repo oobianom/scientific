@@ -1,5 +1,7 @@
 #' @details `html()` provides the HTML format based on the scientific CSS
 #' @param template template name to use
+#' @note
+#' Template options include "template1" and "template2"
 #' @rdname handout
 #' @examples
 #' \dontrun{
