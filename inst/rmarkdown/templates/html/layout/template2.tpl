@@ -17,7 +17,7 @@ $if(font-size-adjustment)$
   <meta name="font-size-adjustment" content="$font-size-adjustment$"/>
 $endif$
     <style>
-:root{--sidebarmaincol:$if(themecolor)$$themecolor$$else$#dc3545$endif$;--sidebarmaincolfade:#dc354522;--hoversidefade1:rgba(0,0,0,0.1);--sidebarprimcol:#ffffff}.mainbody a{ color: #333333 !important; text-decoration: underline; }.sidebar{background-color:var(--sidebarmaincol);min-height:100vh;color:var(--sidebarprimcol)}.nav-link.active,.navsideleft li a:active,.progress-badge,.sub-menu{background-color:var(--hoversidefade1)}.nav-link,.navsideleft li a{display:block;color:#333;padding:.75rem 1rem;cursor:pointer}.nav-link:hover,.navsideleft li a:hover{background-color:var(--hoversidefade1);color:#000}.align-left-icon,.check-icon{width:20px;height:20px;margin-right:8px}.dropdown-toggle::after{float:right;margin-top:8px}.sub-menu{padding-left:2rem}.sub-menu .nav-link{font-size:.9rem;padding:.5rem 1rem}.chevron-icon{width:16px;height:16px;margin-right:8px;transition:transform .3s}.collapsed .chevron-icon{transform:rotate(-45deg)}.navsideleft{background-color:#fff}.navsideleft .nav{background-color:var(--sidebarmaincolfade)}pre{overflow:hidden}.enlighter-tooltip {display:none}.sticky-column { position: sticky; top: 0; height: 100vh; overflow-y: auto;}code, kbd, pre, samp {  font-size: unset!important; }
+:root{--sidebarmaincol:$if(themecolor)$$themecolor$$else$#dc3545$endif$;--sidebarmaincolfade:#dc354522;--hoversidefade1:rgba(0,0,0,0.1);--sidebarprimcol:#ffffff}.mainbody a{ color: #333333 !important; text-decoration: underline; }.sidebar{background-color:var(--sidebarmaincol);min-height:100vh;color:var(--sidebarprimcol)}.nav-link.active,.navsideleft li a:active,.progress-badge,.sub-menu{background-color:var(--hoversidefade1)}.navsideleft ul{padding:0!important;}.navsideleft li{list-style: none;}.nav-link,.navsideleft li a{display:block;color:#333;padding:.75rem 1rem;cursor:pointer}.nav-link:hover,.navsideleft li a:hover{background-color:var(--hoversidefade1);color:#000}.align-left-icon,.check-icon{width:20px;height:20px;margin-right:8px}.dropdown-toggle::after{float:right;margin-top:8px}.sub-menu{padding-left:2rem}.sub-menu .nav-link{font-size:.9rem;padding:.5rem 1rem}.chevron-icon{width:16px;height:16px;margin-right:8px;transition:transform .3s}.collapsed .chevron-icon{transform:rotate(-45deg)}.navsideleft{background-color:#fff}.navsideleft .nav{background-color:var(--sidebarmaincolfade)}pre{overflow:hidden}.enlighter-tooltip {display:none}.sticky-column { position: sticky; top: 0; height: 100vh; overflow-y: auto;}code, kbd, pre, samp {  font-size: unset!important; }
     </style>
 </head>
 <body>
@@ -33,6 +33,7 @@ $endif$
 
                 <nav class="mt-4 navsideleft">
                     <div class="nav flex-column">
+                    $toc$
                         <a class="nav-link d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#intro-collapse">
                             <span class="d-flex align-items-center">
                                 <svg class="align-left-icon" fill="currentColor" viewBox="0 0 16 16">
@@ -118,7 +119,7 @@ $endif$
                         </div>
                     </div>
 
-                    $toc$
+
                 </nav>
             <div class="progress-badge p-2">
                        Last Updated: $if(date)$$date$$endif$
@@ -144,7 +145,22 @@ $endif$
     </div>
 
 
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Define the SVG icons
+            let iconSVG = `<svg class="check-icon" fill="currentColor" viewBox="0 0 16 16"> <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/> </svg>`;
+            let chevronSVG = `<svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor"> <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/> </svg>`;
 
+            let links = document.querySelectorAll(".navsideleft li a");
+
+            links.forEach(link => {
+                const text = link.textContent.trim();
+                // Insert SVG directly inside the <a> tag
+                link.className = "nav-link d-flex align-items-center justify-content-between collapsed";
+                link.innerHTML = '<span class="d-flex align-items-center">'+iconSVG+text+"</span>"+chevronSVG;
+            });
+        });
+    </script>
 <script type="text/javascript">
 var hashloc = window.location.hash;
 var currid = hashloc.replace("#","");
