@@ -34,92 +34,7 @@ $endif$
                 <nav class="mt-4 navsideleft">
                     <div class="nav flex-column">
                     $toc$
-                        <a class="nav-link d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#intro-collapse">
-                            <span class="d-flex align-items-center">
-                                <svg class="align-left-icon" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-                                </svg>
-                                Introduction
-                            </span>
-                            <svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/>
-                            </svg>
-                        </a>
-                        <div class="collapse sub-menu" id="intro-collapse">
-                            <a class="nav-link">Overview</a>
-                            <a class="nav-link">Getting Started</a>
-                            <a class="nav-link">System Requirements</a>
-                        </div>
-
-                        <!-- Accessing 9 -->
-                        <a class="nav-link d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#access-collapse">
-                            <span class="d-flex align-items-center">
-                                <svg class="check-icon" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                </svg>
-                                First Link 1
-                            </span>
-                            <svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/>
-                            </svg>
-                        </a>
-                        <div class="collapse sub-menu" id="access-collapse">
-                            <a class="nav-link">Login Process</a>
-                            <a class="nav-link">Security Settings</a>
-                            <a class="nav-link">Password Reset</a>
-                        </div>
-
-                        <!-- Schedule -->
-                        <a class="nav-link d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#schedule-collapse">
-                            <span class="d-flex align-items-center">
-                                <svg class="check-icon" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                </svg>
-                                Viewing Your Schedule
-                            </span>
-                            <svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/>
-                            </svg>
-                        </a>
-                        <div class="collapse sub-menu" id="schedule-collapse">
-                            <a class="nav-link">Calendar View</a>
-                            <a class="nav-link">Weekly Schedule</a>
-                            <a class="nav-link">Time Blocks</a>
-                        </div>
-
-                        <!-- Web Portal Requests -->
-                        <a class="nav-link d-flex align-items-center justify-content-between collapsed" data-bs-toggle="collapse" data-bs-target="#web-collapse">
-                            <span class="d-flex align-items-center">
-                                <svg class="check-icon" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                </svg>
-                                Web Portal Requests
-                            </span>
-                            <svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/>
-                            </svg>
-                        </a>
-                        <div class="collapse sub-menu" id="web-collapse">
-                            <a class="nav-link">Submit Request</a>
-                            <a class="nav-link">View Status</a>
-                            <a class="nav-link">Cancel Request</a>
-                        </div>
-
-                        <!-- Mobile App Requests -->
-                        <a class="nav-link active d-flex align-items-center justify-content-between" data-bs-toggle="collapse" data-bs-target="#mobile-collapse">
-                            <span>Mobile App Requests</span>
-                            <svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor">
-                                <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/>
-                            </svg>
-                        </a>
-                        <div class="collapse show sub-menu" id="mobile-collapse">
-                            <a class="nav-link">Install App</a>
-                            <a class="nav-link">Submit Request</a>
-                            <a class="nav-link">View Status</a>
-                        </div>
                     </div>
-
-
                 </nav>
             <div class="progress-badge p-2">
                        Last Updated: $if(date)$$date$$endif$
@@ -146,8 +61,47 @@ $endif$
 
 
 <script>
-document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".navsideleft li a").forEach(e=>{let t=e.textContent.trim();e.className="nav-link d-flex align-items-center justify-content-between collapsed",e.innerHTML='<span class="d-flex align-items-center"><svg class="check-icon" fill="currentColor" viewBox="0 0 16 16"> <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/> </svg>'+t+"</span>",e.setAttribute("data-bs-toggle","collapse"),e.setAttribute("data-bs-target","#access-colldiv-"+Math.floor(1e5*Math.random()))});let e=document.querySelectorAll(".navsideleft li > ul");e.forEach(e=>{var t=e.parentElement.querySelector("a");t.insertAdjacentHTML("beforeend",'<svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor"> <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/> </svg>');var l=t.getAttribute("data-bs-target");let a=document.createElement("div");a.className="collapse sub-menu",a.id=l.replace("#",""),a.innerHTML=e.innerHTML,e.parentNode.replaceChild(a,e),a.querySelectorAll("li").forEach(e=>{e.classList.add("nav-link")})})});
-</script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Define the SVG icons
+            let iconSVG = `<svg class="check-icon" fill="currentColor" viewBox="0 0 16 16"> <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/> </svg>`;
+            let chevronSVG = `<svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor"> <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/> </svg>`;
+            let iconSVG2 = `<span class="d-flex align-items-center"> <svg class="align-left-icon" fill="currentColor" viewBox="0 0 16 16"> <path d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>`;
+
+
+            let links = document.querySelectorAll(".navsideleft li a");
+
+            links.forEach(link => {
+                const text = link.textContent.trim();
+                // Insert SVG directly inside the <a> tag
+                link.className = "nav-link d-flex align-items-center justify-content-between collapsed";
+                link.innerHTML = '<span class="d-flex align-items-center">'+iconSVG+text+"</span>"//+chevronSVG;
+                link.setAttribute("data-bs-toggle", "collapse");
+                link.setAttribute("data-bs-target", "#access-colldiv-"+Math.floor(Math.random() * 100000));
+            });
+
+
+            // Select all <ul> inside <li> and replace with <div class="collapse sub-menu">
+            const nestedLists = document.querySelectorAll(".navsideleft li > ul");
+
+            nestedLists.forEach(ul => {
+                var nearestA = ul.parentElement.querySelector("a")
+                nearestA.insertAdjacentHTML('beforeend', chevronSVG);
+                var nearestAid = nearestA.getAttribute("data-bs-target")
+                const div = document.createElement("div");
+                div.className = "collapse sub-menu";
+                div.id = nearestAid.replace("#","")//"access-colldiv-"+Math.floor(Math.random() * 100000)
+                div.innerHTML = ul.innerHTML; // Copy the inner content of the <ul>
+
+                // Replace the <ul> with the new <div>
+                ul.parentNode.replaceChild(div, ul);
+
+                // Add class "nav-link" to inner <li> elements
+                div.querySelectorAll("li").forEach(innerLi => {
+                    innerLi.classList.add("nav-link");
+                });
+            });
+        });
+    </script>
 <script type="text/javascript">
 var hashloc = window.location.hash;
 var currid = hashloc.replace("#","");
