@@ -146,21 +146,8 @@ $endif$
 
 
 <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Define the SVG icons
-            let iconSVG = `<svg class="check-icon" fill="currentColor" viewBox="0 0 16 16"> <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/> </svg>`;
-            let chevronSVG = `<svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor"> <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/> </svg>`;
-
-            let links = document.querySelectorAll(".navsideleft li a");
-
-            links.forEach(link => {
-                const text = link.textContent.trim();
-                // Insert SVG directly inside the <a> tag
-                link.className = "nav-link d-flex align-items-center justify-content-between collapsed";
-                link.innerHTML = '<span class="d-flex align-items-center">'+iconSVG+text+"</span>"+chevronSVG;
-            });
-        });
-    </script>
+document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".navsideleft li a").forEach(e=>{let t=e.textContent.trim();e.className="nav-link d-flex align-items-center justify-content-between collapsed",e.innerHTML='<span class="d-flex align-items-center"><svg class="check-icon" fill="currentColor" viewBox="0 0 16 16"> <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/> </svg>'+t+"</span>",e.setAttribute("data-bs-toggle","collapse"),e.setAttribute("data-bs-target","#access-colldiv-"+Math.floor(1e5*Math.random()))});let e=document.querySelectorAll(".navsideleft li > ul");e.forEach(e=>{var t=e.parentElement.querySelector("a");t.insertAdjacentHTML("beforeend",'<svg class="chevron-icon" viewBox="0 0 16 16" fill="currentColor"> <path d="M8 0l8 8-8 8-1.4-1.4L13.2 8 6.6 1.4z"/> </svg>');var l=t.getAttribute("data-bs-target");let a=document.createElement("div");a.className="collapse sub-menu",a.id=l.replace("#",""),a.innerHTML=e.innerHTML,e.parentNode.replaceChild(a,e),a.querySelectorAll("li").forEach(e=>{e.classList.add("nav-link")})})});
+</script>
 <script type="text/javascript">
 var hashloc = window.location.hash;
 var currid = hashloc.replace("#","");
