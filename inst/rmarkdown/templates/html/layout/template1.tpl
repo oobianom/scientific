@@ -161,8 +161,7 @@ $endif$
         <div class="u-container-style u-layout-cell u-palette-1-base u-size-10 u-layout-cell-1" style="border-right-width:0px; border-left:2px solid #333333">
           <div class="u-container-layout u-valign-top u-container-layout-1">
 		<div class="u-sticky u-header u-text-dark ytoc">
-            <div class="table-content-header-title" style="padding-top:20px;"><b>TABLE OF CONTENTS</b></div>
-            $toc$ </div>
+
 	    </div>
         </div>
         $endif$
@@ -178,80 +177,7 @@ $endif$
 
 
 <style>
-.ytoc a {
-  display: block;
-}
-
-.ytoc ul > ul {
-  display: none;
-  list-style-type:none;
-}
-
-.ytoc ul > ul > li {
-    list-style:none;
-}
-
-.ytoc ul > li > ul {
-   color:blue;
-   display:none
-}
-.ytoc ul > li {
-   color: #777777;
-   list-style-type:none;
-   padding-left: 10px;
-}
-
-.ytoc ul > li:has(ul) {
-   color:$if(themecolor)$$themecolor$$else$red$endif$;
-}
-
-.ytoc li:has(ul) > a{
-/*font-weight:600;*/
-}
-li:has(.hoveredd){
-/*background-color:#48b2!important;*/
-}
-.hoveredd{
-color: $if(themecolor)$$themecolor$$else$white$endif$!important;
-border-right: 5px solid;
-}
-
-.ytoc ul {
-margin-top: 5px;
-	padding-inline-start: 1em;
-	font-weight: 200;
-
-	::marker {
-		content: "➲";
-	}
-
-	ul ::marker {
-		content: "➥";
-	}
-}
-
-.ytoc li {
-	position: relative;
-	padding-inline-start: 0.2em;
-	padding-top: 0.3em;
-	padding-bottom: 0.3em;
-	/*border-bottom: 1px solid #48b2;*/
-	cursor: default;
-	transition: color 0.4s;
-
-	&:hover {
-		color: #48b;
-
-		&::marker {
-			font-weight: 700;
-		}
-		&::after {
-			opacity: 1;
-			transition-delay: 0.2s;
-		}
-	}
-}
-
+:root{--sidebarmaincol:$if(themecolor)$$themecolor$$else$#dc3545$endif$;} .ytoc a { display: block; } .ytoc ul > ul { display: none; list-style-type:none; } .ytoc ul > ul > li { list-style:none; } .ytoc ul > li > ul { color:blue; display:none } .ytoc ul > li { color: #777777; list-style-type:none; padding-left: 10px; } .ytoc ul > li:has(ul) { color:$if(themecolor)$$themecolor$$else$red$endif$; } .ytoc li:has(ul) > a{ /*font-weight:600;*/ } li:has(.hoveredd){ /*background-color:#48b2!important;*/ } .hoveredd{ color: $if(themecolor)$$themecolor$$else$white$endif$!important; border-right: 5px solid; } .ytoc ul { margin-top: 5px; padding-inline-start: 1em; font-weight: 200; ::marker { content: "➲"; } ul ::marker { content: "➥"; } } .ytoc li { position: relative; padding-inline-start: 0.2em; padding-top: 0.3em; padding-bottom: 0.3em; /*border-bottom: 1px solid #48b2;*/ cursor: default; transition: color 0.4s; &:hover { color: #48b; &::marker { font-weight: 700; } &::after { opacity: 1; transition-delay: 0.2s; } } } .enlighter-t-godzilla {border-left: solid 6px var(--sidebarmaincol);
 </style>
 
 
@@ -343,7 +269,7 @@ $endif$
         EnlighterJS.init('$codelang$', '',{language : '$codelang$',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
 
     </script>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://scientific.obi.obianom.com/assets/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script id="MathJax-script" async src="https://scientific.obi.obianom.com/assets/tex-mml-chtml.js"></script>
 </body>
 </html>
