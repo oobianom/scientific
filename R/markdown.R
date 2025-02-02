@@ -1,5 +1,15 @@
-#' @details `html()` provides the HTML format based on the scientific CSS
+#' Scientific handout formats (PDF and HTML)
+#'
+#' Template for creating scientific handout
+#'
+#' `handout()` provides the PDF format
+#'
+#' @param ... Other arguments to be passed to
+#'   [html_document()] (note you cannot use the `theme` argument in
+#'   `html()`; this arguments have been set internally)
 #' @param template template name to use
+#' @return an HTML notebook output based on the R markdown document provided
+#' @details `html()` provides the HTML format based on the scientific CSS
 #' @note
 #' Template options include "template1" and "template2"
 #' @rdname handout
