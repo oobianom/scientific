@@ -1,5 +1,5 @@
 # Two rmarkdown templates for scientific and technical reports
-__merely a rebuild of the sciRmdTheme R package__
+_merely a rebuild of the sciRmdTheme R package_
 
 ```r
 install.packages("scientific") # install
@@ -41,7 +41,7 @@ output:
 ```
 ![](https://scientific.obi.obianom.com/screenshot/template2.jpg)
 
-### Project website: https://scientific.obi.obianom.com/
+### Project website: https://scientific.obi.obianom.com
 
 ## Example .Rmd
 ```
@@ -91,7 +91,7 @@ ggplot(mtcars2, aes(hp, mpg, color = am)) +
 
 
 
-## Highlighter options (Enlighterjs)
+## Highlighter options for `highlighter` argument
 
 ```{r}
 Enlighter (enlighter, standard) - Enlighter`s default Theme
@@ -108,7 +108,7 @@ Dracula (dracula) - Dark, using official draculatheme colorscheme
 Rowhammer (rowhammer) - Light, Transparent, divided rows
 ```
 
-## Languages for `codelang`
+## Languages for `codelang` argument
 ```
 ABAP (abap)
 Apache HTTPD (apache)
