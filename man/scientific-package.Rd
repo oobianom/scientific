@@ -4,9 +4,9 @@
 \name{scientific-package}
 \alias{scientific}
 \alias{scientific-package}
-\title{scientific: Highly Customizable 'rmarkdown' and 'shiny' Themes for Scientific Reporting}
+\title{scientific: Two Highly Customizable 'rmarkdown' Themes for Scientific Reports}
 \description{
-Offers 'markdown' output formats designed with various scientific styles, allowing users to generate PDF and HTML outputs. The output has a contemporary appearance with vibrant visuals, providing numerous styles for effective highlighting. The package also includes additional features specifically tailored for front-page slides, enhancing the overall presentation and customization options. The package was created using the 'tufte' \url{https://rstudio.github.io/tufte/} package code as a starting point.
+Offers 'markdown' output formats designed with various styles, allowing users to generate HTML reports tailored for scientific or machine learning showcase. The output has a contemporary appearance with vibrant visuals, providing numerous styles for effective highlighting. Created using the 'tufte' \url{https://rstudio.github.io/tufte/} package code as a starting point.
 }
 \seealso{
 Useful links:
