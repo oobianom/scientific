@@ -1,21 +1,47 @@
-# Towards Streamlined Scientific Reporting: Rmarkdown and Shiny Templates for Scientists
-
-#### Highly customizable rmarkdown theme
-
-#### Built to maximize efficiency, whitespace and style
+# Two rmarkdown templates for scientific and technical reports
+__merely a rebuild of the sciRmdTheme R package__
 
 ```r
-# install
-remotes::install_github("oobianom/scientific")
-
-# load library
-library(scientific)
+install.packages("scientific") # install
+library(scientific) # load library
 ```
 
-### Example output: https://scientific.obi.obianom.com/
+## Use template 1
 
-Take 2, a rebuild of sciRmdTheme
+```
+---
+title: "Sample title"
+codelang: "R" 
+author: "Obinna Obianom"
+date: "`r Sys.Date()`"
+output:
+  scientific::html: 
+    template: template1
+    toc: TRUE 
+---
 
+```
+![](https://scientific.obi.obianom.com/screenshot/template1.jpg)
+
+
+## Use template 2
+
+```
+---
+title: "Sample title"
+codelang: "R" 
+author: "Obinna Obianom"
+date: "`r Sys.Date()`"
+output:
+  scientific::html: 
+    template: template2
+    toc: TRUE 
+---
+
+```
+![](https://scientific.obi.obianom.com/screenshot/template2.jpg)
+
+### Project website: https://scientific.obi.obianom.com/
 
 ## Example .Rmd
 ```
@@ -30,7 +56,7 @@ output:
   scientific::html: 
     toc: TRUE
     self_contained: TRUE
-link-citations: yes
+    template: template1 # or template2
 summaryslide: TRUE # whether to show summary slide on top
 lightsummaryslide: FALSE # whether to make summary slide light
 summarypoints:
