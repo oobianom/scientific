@@ -42,8 +42,7 @@ Very simply in Rmarkdown with various features, an example of text below
     scientific::html: 
       toc: TRUE
       self_contained: TRUE
-  bibliography: skeleton.bib
-  link-citations: yes
+      template: template1 # or "template2"
   summarypoints:
       - Fusce id velit ut tortor pretium viverra. Lectus urna duis convallis convallis tellus id interdum. 
       - Erat imperdiet sed euismod nisi porta lorem. Sed viverra tellus in hac habitasse platea dictumst. 
