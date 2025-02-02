@@ -26,10 +26,11 @@ $endif$
             <!-- Sidebar for TOC-->
             $if(toc)$
             <div class="d-none d-md-block col-md-3 col-lg-2 px-0 sidebar sticky-column">
+            $if(removeheader)$$else$
                 <div class="p-3">
-                    <h5 class="fw-bold mb-0">$if(title)$$title$$endif$</h5>
-
+                    <h5 class="fw-bold mb-0">$if(runningheader)$$runningheader$$else$$if(title)$$title$$endif$$endif$</h5>
                 </div>
+                $endif$
 
                 <nav class="mt-4 navsideleft">
                     <div class="nav flex-column">
@@ -156,7 +157,7 @@ $endif$
 
     </script>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://scientific.obi.obianom.com/assets/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script id="MathJax-script" async src="https://scientific.obi.obianom.com/assets/tex-mml-chtml.js"></script>
 </body>
 </html>
