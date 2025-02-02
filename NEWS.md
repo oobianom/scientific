@@ -1,6 +1,7 @@
 # 2025.0 : Rmarkdown and Shiny Templates For Scientific Reporting
 
- - Styling a new template
+ - Clean up the scripts
+ - Two distinct Rmarkdown templates: template1 and template2
 
 # 2024.2 : Rmarkdown and Shiny Templates For Scientific Reporting
 
