@@ -1,7 +1,7 @@
 Type: Package
 Package: scientific
 Title: Two Highly Customizable 'rmarkdown' Themes for Scientific Reports
-Version: 2025.0
+Version: 2025.1
 Authors@R: c(
     person("Obinna", "Obianom", email = "idonshayo@gmail.com", role = c("aut", "cre")))
 Maintainer: Obinna Obianom <idonshayo@gmail.com>
