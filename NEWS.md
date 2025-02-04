@@ -1,3 +1,7 @@
+# 2025.1 : Rmarkdown and Shiny Templates For Scientific Reporting
+
+ - Fix navigation of 'template2'
+
 # 2025.0 : Rmarkdown and Shiny Templates For Scientific Reporting
 
  - Clean up the scripts
