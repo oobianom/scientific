@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"$if(lang)$ lang="$lang$" xml:lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="scientific" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="date" content="$date-meta$" />
+$endif$
+<title>
+$if(title-prefix)$$title-prefix$ - $endif$
+$if(pagetitle)$$pagetitle$
+$elseif(title)$
+$title$
+$endif$
+</title>
+$for(header-includes)$
+  $header-includes$
+$endfor$
+<meta name="keywords" content="R personal profiles, $keywords$" />
+$if(footer)$
+  <meta name="copyright" content="$footer$"/>
+$endif$
+$if(font-size-adjustment)$
+  <meta name="font-size-adjustment" content="$font-size-adjustment$"/>
+$endif$
+
+
+  <style type="text/css">
+      .enlighter-btn{
+        display: inline-block;
+        margin: 0px 5px 0px 5px;
+        padding: 3px 5px 3px 5px;
+        border: solid 1px #333333;
+        background-color: #f0f0f0;
+        cursor: pointer;
+    }
+    :root{
+     --primary-theme-col1: $if(themecolor)$$themecolor$$else$#333333$endif$;
+     --white: #ffffff;
+    }
+    .usethemebg{
+      background: var(--primary-theme-col1);
+    }
+    section a:active, section a{
+      color: var(--primary-theme-col1);
+    }
+    code{white-space: pre-wrap;}
+    $if(quotes)$
+    q { quotes: "“" "”" "‘" "’"; }
+    $endif$
+    $if(highlighting-css)$
+    $highlighting-css$
+    $endif$
+    $if(displaymath-css)$
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    $endif$
+
+    pre {display: none;padding: 0; margin: 0; font-size: 13px; word-break: break-all; word-wrap: break-word; background-color: unset; border: 0px solid #ccc; border-radius: 0;}.mainbody .codetogglerbtn{border: 1px; display: block; margin-top: 5px;}
+  </style>
+$if(highlighting-css)$
+  <style type="text/css">
+$highlighting-css$
+  </style>
+$endif$
+
+$for(css)$
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="$css$" />
+$endfor$
+$if(duration)$
+  <meta name="duration" content="$duration$" />
+$endif$
+</head>
+
+
+
+<body  class="u-body u-xl-mode" data-lang="en">
+$for(include-before)$
+$include-before$
+$endfor$
+
+
+
+
+$if(summaryslide)$
+
+<div class="u-header usethemebg u-section-1 u-clearfix $if(lightsummaryslide)$$else$u-grey-80$endif$" style="height:100vh;$if(lightsummaryslide)$border-bottom:2px solid var(--primary-theme-col1); border-top:2px solid var(--primary-theme-col1);$endif$font-size:1.75vw">
+  <div class="u-valign-middle $if(lightsummaryslide)$$else$u-text-white$endif$ u-container-layout u-container-layout-2">
+        $if(title)$ <div class="slide titlepage">
+
+              <h1 class="">$title$</h1>
+              $if(subtitle)$ <h3 class="subtitle">$subtitle$</h3> $endif$
+
+              <p class="author">
+              $for(author)$$author$$sep$ <br />$endfor$
+              </p>
+              $if(date)$ <p class="date">$date$</p> $endif$
+            </div> $endif$
+
+            <h3 class="">Executive Summary</h3>
+            <ul>
+            $for(summarypoints)$
+            <li>$summarypoints$</li>
+            $endfor$
+            </ul>
+  </div>
+</div>
+
+$else$
+$if(removeheader)$
+$else$
+<div class="u-header u-clearfix u-sticky" style="background:$if(themecolor)$$themecolor$$else$#333333$endif$">
+      <div class="u-text-white" style="padding:2px 10px;">$if(title)$$title$$endif$</div>
+</div>
+$endif$
+$endif$
+
+
+
+<section class="u-clearfix u-section-1" id="carousel_888f">
+  <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+    <div class="u-gutter-0 u-layout">
+      <div class="u-layout-row">
+
+        $if(toc)$
+        <div class="u-container-style u-layout-cell u-palette-1-base u-size-20 u-layout-cell-1">
+          <div class="u-container-layout u-valign-top u-container-layout-1">
+
+            <div class="u-sticky u-header u-text-dark ytoc">
+            <div class="table-content-header-title" style="padding-top:35px;"><b>TABLE OF CONTENTS</b></div>
+            $toc$ </div>
+          </div>
+        </div>
+        $else$
+        <div class="u-container-style u-layout-cell u-palette-1-base u-size-10 u-layout-cell-1">
+
+        </div>
+        $endif$
+
+        <div class="u-container-style u-layout-cell u-size-40 u-layout-cell-2 mainbody">
+          <div class="u-container-layout u-valign-middle u-container-layout-2"> $if(title)$ <div class="slide titlepage">
+
+              <h1 class="">$title$</h1>
+              $if(subtitle)$ <h3 class="subtitle">$subtitle$</h3> $endif$
+
+              <p class="author">
+              $for(author)$$author$$sep$ <br />$endfor$
+              </p>
+              $if(date)$ <p class="date">$date$</p> $endif$
+            </div> $endif$
+            <div id="xcontrols"></div>
+            $body$
+
+            </div>
+        </div>
+
+        $if(toc)$$else$
+        <div class="u-container-style u-layout-cell u-palette-1-base u-size-10 u-layout-cell-1" style="border-right-width:0px; border-left:2px solid #333333">
+          <div class="u-container-layout u-valign-top u-container-layout-1">
+		<div class="u-sticky u-header u-text-dark ytoc">
+
+	    </div>
+        </div>
+        $endif$
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<style>
+:root{--sidebarmaincol:$if(themecolor)$$themecolor$$else$#dc3545$endif$;} .ytoc a { display: block; } .ytoc ul > ul { display: none; list-style-type:none; } .ytoc ul > ul > li { list-style:none; } .ytoc ul > li > ul { color:blue; display:none } .ytoc ul > li { color: #777777; list-style-type:none; padding-left: 10px; } .ytoc ul > li:has(ul) { color:$if(themecolor)$$themecolor$$else$red$endif$; } .ytoc li:has(ul) > a{ /*font-weight:600;*/ } li:has(.hoveredd){ /*background-color:#48b2!important;*/ } .hoveredd{ color: $if(themecolor)$$themecolor$$else$white$endif$!important; border-right: 5px solid; } .ytoc ul { margin-top: 5px; padding-inline-start: 1em; font-weight: 200; ::marker { content: "➲"; } ul ::marker { content: "➥"; } } .ytoc li { position: relative; padding-inline-start: 0.2em; padding-top: 0.3em; padding-bottom: 0.3em; /*border-bottom: 1px solid #48b2;*/ cursor: default; transition: color 0.4s; &:hover { color: #48b; &::marker { font-weight: 700; } &::after { opacity: 1; transition-delay: 0.2s; } } } .enlighter-t-godzilla {border-left: solid 6px var(--sidebarmaincol);
+</style>
+
+
+<script type="text/javascript">
+var hashloc=window.location.hash,currid=hashloc.replace("#","");$$(document).ready(function(){$$(".hoveredd").toggleClass("hoveredd"),$$("body").click(function(){$$(".hoveredd").toggleClass("hoveredd")}),$$(".ytoc li:has(ul)").children("a").click(function(){$$(this).parent().children("ul").toggle()}),""!=hashloc&&$$(".ytoc li a[href='"+hashloc+"']").click(),$$("div").hover(function(){let e=$$(this).attr("id");void 0!==e&&!1!==e&&($$(".ytoc li a[href='"+hashloc+"']").next("ul").hide(),$$(".hoveredd").toggleClass("hoveredd"),$$(".ytoc li a[href='#"+e+"']").toggleClass("hoveredd"),$$(".ytoc li a[href='#"+e+"']").next("ul").show())})});
+
+
+
+document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll("pre"),t=document.createElement("button");t.textContent="Show All Code Chunks",t.setAttribute("id","toggleAll"),t.classList.add("codetogglerbtn"),document.getElementById("xcontrols").appendChild(t);let n=!1;e.forEach((e,t)=>{let n=document.createElement("button");n.textContent="Show Code "+(t+1),n.classList.add("codetogglerbtn"),e.parentNode.insertBefore(n,e),n.addEventListener("click",()=>{let o="none"===e.style.display;e.style.display=o?"block":"none",n.textContent=o?"Hide Code "+(t+1):"Show Code "+(t+1)})}),t.addEventListener("click",()=>{n=!n,e.forEach(e=>{e.style.display=n?"block":"none"}),t.textContent=n?"Hide All Code Chunks":"Show All Code Chunks"})});
+</script>
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+$if(mathjax-url)$
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "$mathjax-url$";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+$endif$
+
+
+    <script type="text/javascript">
+        EnlighterJS.init('pre code', '',{
+                language : $if(codelang)$'$codelang$'$else$'R'$endif$,
+                theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$,
+                indent : 2,
+                // &amp; to &
+                ampersandCleanup: true,
+                // enable line hover highlighting
+                linehover: true,
+                // show linenumbers
+                linenumbers: $if(linenum)$$linenum$$else$true$endif$,
+                // copy css classes from origin element to outer wrapper
+                retainCssClasses: false,
+                // additional css classes added to outer wrapper
+                cssClasses: '',
+                // top outer toolbar
+                toolbarOuter: '{BTN_TABS}',
+                // header toolbar
+                toolbarTop: '{BTN_RAW}{BTN_COPY}{BTN_WINDOW}',
+                // footer toolbar
+                toolbarBottom: '',
+                // no line offset
+                lineoffset: 0,
+                // no special line highlighting
+                highlight: '',
+                // default layout
+                layout: 'standard',
+                // or 'scroll
+                textOverflow: 'break',
+                // enable collapse / vertical scroll
+                collapse: false,
+                // default title
+                title: ''
+
+
+        });
+
+        EnlighterJS.init('$codelang$', '',{language : '$codelang$',theme: $if(highlighter)$'$highlighter$'$else$'godzilla'$endif$})
+
+    </script>
+<script src="https://scientific.obi.obianom.com/assets/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script id="MathJax-script" async src="https://scientific.obi.obianom.com/assets/tex-mml-chtml.js"></script>
+</body>
+</html>
