@@ -26,6 +26,7 @@
 #' }
 #' @export
 html <- function(...,template = "template1") {
+  code_folding = NULL
   margin_references = TRUE
   html_document2 <- function(..., extra_dependencies = list()) {
     rmarkdown::html_document(
