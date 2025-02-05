@@ -16,7 +16,7 @@ quote_footer(text)
 
 sans_serif(text)
 
-html(..., template = "template1", code_folding)
+html(..., template = "template1")
 }
 \arguments{
 \item{text}{A character string to be presented as a \dQuote{new thought}
@@ -30,8 +30,6 @@ the page width is too narrow (by default it is a circled plus sign)}
 `html()`; this arguments have been set internally)}
 
 \item{template}{template name to use}
-
-\item{code_folding}{code folding is disabled in the current version}
 }
 \value{
 an HTML notebook output based on the R markdown document provided
