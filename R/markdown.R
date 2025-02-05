@@ -31,8 +31,7 @@ html <- function(...,template = "template1") {
   cf. = list(...)$code_folding
   if(not.null(cf.)){
     if(cf. == "hide"){
-      # include hide code template
-      # tplext = ".tpl2"
+      tplext = ".tpl2"
     }
   }
   html_document2 <- function(..., extra_dependencies = list()) {
