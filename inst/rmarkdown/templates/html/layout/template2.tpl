@@ -17,7 +17,7 @@ $if(font-size-adjustment)$
   <meta name="font-size-adjustment" content="$font-size-adjustment$"/>
 $endif$
     <style>
-:root{--sidebarmaincol:$if(themecolor)$$themecolor$$else$#dc3545$endif$;--sidebarmaincolfade:#dc354522;--hoversidefade1:rgba(0,0,0,0.1);--sidebarprimcol:#ffffff}.mainbody a{ color: #333333 !important; text-decoration: underline; }.sidebar{background-color:var(--sidebarmaincol);min-height:100vh;color:var(--sidebarprimcol)}.nav-link.active,.navsideleft li a:active,.progress-badge,.sub-menu{background-color:var(--hoversidefade1)}.navsideleft ul{padding:0!important;}.navsideleft li{list-style: none;}.nav-link,.navsideleft li a{display:block;color:#333;padding:.75rem 1rem;cursor:pointer}.nav-link:hover,.navsideleft li a:hover{background-color:var(--hoversidefade1);color:#000}.align-left-icon,.check-icon{width:20px;height:20px;margin-right:8px;color:lightgray}.dropdown-toggle::after{float:right;margin-top:8px}.sub-menu{padding-left:2rem}.sub-menu .nav-link{font-size:.9rem;padding:.5rem 1rem}.chevron-icon{width:16px;height:16px;margin-right:8px;transition:transform .3s}.collapsed .chevron-icon{transform:rotate(-45deg)}.navsideleft{background-color:#fff}.navsideleft .nav{background-color:var(--sidebarmaincolfade)}pre{overflow:hidden}.enlighter-tooltip {display:none}.sticky-column { position: sticky; top: 0; height: 100vh; overflow-y: auto;}code, kbd, pre, samp {  font-size: unset!important; }.enlighter-t-godzilla {border-left: solid 6px var(--sidebarmaincol);}
+:root{--sidebarmaincol:$if(themecolor)$$themecolor$$else$#dc3545$endif$;--sidebarmaincolfade:#dc354522;--hoversidefade1:rgba(0,0,0,0.1);--sidebarprimcol:#ffffff}.mainbody a{ color: #333333 !important; text-decoration: underline; }.sidebar{background-color:var(--sidebarmaincol);min-height:100vh;color:var(--sidebarprimcol)}.nav-link.active,.navsideleft li a:active,.progress-badge,.sub-menu{background-color:var(--hoversidefade1)}.navsideleft ul{padding:0!important;}.navsideleft li{list-style: none;}.nav-link,.navsideleft li a{display:block;color:#333;padding:.75rem 1rem;cursor:pointer}.nav-link:hover,.navsideleft li a:hover{background-color:var(--hoversidefade1);color:#000}.align-left-icon,.check-icon{width:20px;height:20px;margin-right:8px;color:lightgray}.dropdown-toggle::after{float:right;margin-top:8px}.sub-menu{padding-left:2rem}.sub-menu .nav-link{font-size:.9rem;padding:.5rem 1rem}.chevron-icon{width:16px;height:16px;margin-right:8px;transition:transform .3s}.collapsed .chevron-icon{transform:rotate(-45deg)}.navsideleft{background-color:#fff}.navsideleft .nav{background-color:var(--sidebarmaincolfade)}pre{overflow:hidden}.enlighter-tooltip {display:none}.sticky-column { position: sticky; top: 0; height: 100vh; overflow-y: auto;}code, kbd, pre, samp {  font-size: unset!important; }.enlighter-t-godzilla {border-left: solid 6px var(--sidebarmaincol);}pre {padding: 0; margin: 0; font-size: 13px; word-break: break-all; word-wrap: break-word; background-color: unset; border: 0px solid #ccc; border-radius: 0;}
     </style>
 </head>
 <body>
@@ -47,7 +47,7 @@ $endif$
             <div class="col-12 $if(rightpadding)$col-md-8 col-lg-9$else$col-md-9 col-lg-10$endif$ py-4 px-5 shadow mainbody">
             $if(title)$ <div class="slide titlepage">
 
-              <h1 class="">$title$</h1>
+              <h1 class="">$title/chomp$</h1>
               $if(subtitle)$ <h3 class="subtitle">$subtitle$</h3> $endif$
 
               <p class="author">
