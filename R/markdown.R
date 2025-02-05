@@ -26,13 +26,20 @@
 #' }
 #' @export
 html <- function(...,template = "template1") {
-  code_folding = NULL
   margin_references = TRUE
+  tplext = ".tpl"
+  cf. = list(...)$code_folding
+  if(not.null(cf.)){
+    if(cf. == "hide"){
+      # include hide code template
+      # tplext = ".tpl2"
+    }
+  }
   html_document2 <- function(..., extra_dependencies = list()) {
     rmarkdown::html_document(
       ...,
       template = system.file("rmarkdown", "templates", "html",
-                             "layout",paste0(template,".tpl"), package = .packageName),
+                             "layout",paste0(template,tplext), package = .packageName),
       extra_dependencies = c(
         extra_dependencies, fetchHtmlDep()
       )
