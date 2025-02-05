@@ -38,7 +38,7 @@ html <- function(...,template = "template1") {
       )
     )
   }
-  format <- html_document2(theme = NULL, highlight= NULL, ...)
+  format <- html_document2(theme = "default", highlight= NULL, ...)
   pandoc2 <- pandoc2.0()
 
   # add --wrap=preserve to pandoc args for pandoc 2.0:
