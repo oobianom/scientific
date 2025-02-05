@@ -43,6 +43,8 @@ output:
 
 ### Project website: https://scientific.obi.obianom.com
 
+### Sample HTML output: https://rstudio-pubs-static.s3.amazonaws.com/1268472_5dfbe81f2ec448518c5fd7f5082a83a7.html
+
 ## Example .Rmd
 ```
 ---
