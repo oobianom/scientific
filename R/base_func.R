@@ -1,7 +1,5 @@
 .onLoad <- function(lib, pkg) {
-  knitr::knit_engines$set(marginfigure = function(options) {
-    ''
-  })
+  knitr::knit_engines$set(marginfigure = function(options) {''})
 }
 
 #' @details `newthought()` can be used in inline R expressions in R
